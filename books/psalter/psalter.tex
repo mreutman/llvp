@@ -1,0 +1,250 @@
+\documentclass[twoside,11pt]{book}
+%\documentclass[twoside,12pt,showframe]{book}
+\usepackage[none]{hyphenat}
+\usepackage{everysel}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{svg}
+
+\setstretch{1.5}
+\setlength{\emergencystretch}{3em}
+\raggedbottom
+
+\usepackage[
+  papersize={8.5in,11in},
+  layout=letterpaper,
+  right=1.0in,
+  left=1.0in,
+  lines=32,
+  top=0.8in,
+  headheight=14.5pt,
+  includehead,
+  heightrounded,
+]{geometry}
+
+
+% Page border %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\enablePageBorder}{1}
+\newcommand{\pageBorderBegin}{2}
+
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\AddToShipoutPictureBG{
+  \ifnum\enablePageBorder>0
+  \ifnum\value{page}>\pageBorderBegin % page to begin drawing border
+  \begin{tikzpicture}[overlay,remember picture]
+  \draw [line width=3pt]
+    ($ (current page.north west) + (0.75in,-0.55in) $)
+    rectangle
+    ($ (current page.south east) + (-0.75in,0.55in) $);
+  \draw [line width=0.75pt]
+    ($ (current page.north west) + (0.8in,-0.60in) $)
+    rectangle
+    ($ (current page.south east) + (-0.8in,0.60in) $); 
+  \end{tikzpicture}%
+  \fi
+  \fi
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setmainfont[
+  Path = ./common/fonts/dueblo/mod/,
+  Extension = .otf,
+  UprightFont = *-MED,
+  BoldFont = *-BOL,
+  ItalicFont = *-REG,
+  BoldItalicFont = *-REG,
+  Ligatures = {NoCommon, NoDiscretionary},
+  Numbers=Tabular,
+]{Dueblo-SEMI-EXT}
+
+%\setlength{\emergencystretch}{6em}
+\EverySelectfont{%
+%\fontdimen2\font=1em% interword space
+\fontdimen3\font=4.5em% interword stretch
+\fontdimen4\font=0.2em% interword shrink
+%\fontdimen7\font=0.2em% extra space
+}
+
+%\newcommand{\symbolResponse}{{\liturgy R}}
+%\newcommand{\symbolVersicle}{{\liturgy V}}
+
+\newcommand{\defaultFontSize}{\large}
+
+\newcommand{\formatFirstLetter}{\huge}
+
+\newcommand{\formatRepeatText}
+{\itshape\footnotesize\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1.0em}
+
+\newcommand{\formatTextHeader}
+{\itshape\addfontfeature{LetterSpace=5.0}\fontdimen2\font=0.5em}
+
+\newcommand{\formatTextPsalmChapter}
+{\defaultFontSize\bfseries\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1.0em}
+
+\newcommand{\formatTextPsalmInscription}
+{\normalsize\itshape\addfontfeature{LetterSpace=2.5}\fontdimen2\font=0.25em}
+
+\newcommand{\formatTextVerseNumber}
+{\itshape\tiny}
+
+\newcommand{\formatOdeCountNumber}
+{\bfseries\small}
+
+% 1. Define the counter in your preamble
+\newcounter{headerstartpage}
+\setcounter{headerstartpage}{3} % headers start after this page
+
+% 2. Modify the command to check the page number
+\newcommand{\setPageHeader}[1]{%
+  \ifnum\value{page}>\value{headerstartpage}%
+    \markboth{\textsc{\formatTextHeader cap. {\footnotesize #1}}}%
+             {\textsc{\formatTextHeader cap. {\footnotesize #1}}}%
+  \else
+    \markboth{}{}% Clear headers if we haven't reached the page count yet
+  \fi
+}
+
+\newcommand{\firstLetter}[1]{{\formatFirstLetter #1}}
+
+\newcommand{\indentOn}{%
+  \begin{flushleft}\hangindent=2em\hangafter=1
+  \leftskip=1.75em\rightskip=1.75em
+}
+
+\newcommand{\indentOff}{%
+  \end{flushleft}\hangindent=0em\hangafter=0
+  \leftskip=0em\rightskip=0em
+}
+
+\newcommand{\odeChapter}[1]{%
+  \hfill%
+  {\formatTextPsalmChapter Ċànticum~~#1}%
+  \hfill%
+  \setPageHeader{#1}%
+}
+
+\newcommand{\odeCount}[1]{%
+  \textsuperscript{\formatTextVerseNumber#1. }%
+}
+
+\newcommand{\prayerTitle}[1]{%
+  {\hspace{2em}\textsc{\formatTextPsalmChapter #1}}%
+}
+
+\newcommand{\psalmChapter}[1]{%
+  \hfill%
+  {\formatTextPsalmChapter Psalmus #1}%
+  \hfill%
+  \setPageHeader{#1}%
+}
+
+\newcommand{\psalmVerse}[1]{%
+  \textsuperscript{\formatTextVerseNumber#1. }%
+}
+
+\newcommand{\psalmInscription}[1]{%
+  {\formatTextPsalmInscription #1} {\large\itshape\phantom{.}✠}
+}
+
+\newcommand{\psalmSkip}[1]{\vspace*{#1\baselineskip}}
+
+\newcommand{\psalmEnd}{%
+  {\large\itshape\phantom{..}✠}
+
+  \vspace*{1\baselineskip}
+}
+
+\newcommand{\psalmEndExtra}{%
+  {\large\itshape\phantom{..}✠}
+
+  \vspace*{2\baselineskip}
+}
+
+\newcommand{\psalmEndNewPage}{%
+  {\large\itshape\phantom{..}✠}
+
+  \newpage
+}
+
+\newcommand{\psalmEndPictureNewPage}{%
+  \vfill\vfill
+
+  {\hfill\itshape\fontsize{70}{60}\selectfont \raisebox{-0.15ex}{✠} \hfill}
+
+  \vfill\vfill\vfill
+
+  \newpage
+}
+
+\newcommand{\psalmEndDecorate}[1]{%
+
+  \vspace*{#1\baselineskip}
+  {\hfill\itshape\Huge —~~\raisebox{-0.15ex}{✠}~~— \hfill}
+  \vspace*{#1\baselineskip}
+
+}
+
+\newcommand{\psalmEndDecorateNewPage}{%
+
+  \vfill
+  {\hfill\itshape\Huge —~~\raisebox{-0.15ex}{✠}~~— \hfill}
+  \vfill
+  \newpage
+
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.75pt}
+\fancyhead[LE,RO]{\footnotesize\thepage}
+\fancyhead[LO,RE]{\leftmark}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0pt}
+
+\renewcommand{\thepage}{\formatTextHeader\textsc{\arabic{page}}}
+
+\begin{document}
+
+\defaultFontSize
+
+\pagestyle{empty}
+
+\vspace*{\fill}
+
+\begin{center}
+{\bfseries\fontsize{40}{60}\textsc{Lìber Psalmórum}}
+
+\vspace*{3\baselineskip}
+
+{\itshape\fontsize{100}{60}\selectfont\raisebox{-0.15ex}{✠}}
+
+\end{center}
+
+\vfill\vfill
+\newpage
+
+\pagestyle{fancy}
+\setcounter{page}{1}
+
+\scshape
+
+\chead{\scshape\formatTextHeader Distribúzio Psalmórum}
+\input{tables}
+
+\chead{\scshape\formatTextHeader Orázio Inizális}
+\input{beginning}
+
+\chead{\scshape\formatTextHeader Psalmi Davídi}
+\input{generated-psalmi}
+
+\chead{\scshape\formatTextHeader Ċàntica Bìblica}
+\input{generated-cantica}
+
+\end{document}
