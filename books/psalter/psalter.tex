@@ -3,6 +3,7 @@
 \usepackage[none]{hyphenat}
 \usepackage{everysel}
 \usepackage{fancyhdr}
+\usepackage{graphicx}
 \usepackage{fontspec}
 \usepackage{multirow}
 \usepackage{setspace}
@@ -174,7 +175,11 @@
 \newcommand{\psalmEndPictureNewPage}{%
   \vfill\vfill
 
-  {\hfill\itshape\fontsize{70}{60}\selectfont \raisebox{-0.15ex}{✠} \hfill}
+  {\hfill
+  {\itshape\huge\raisebox{1.9ex}{-}}\hspace{1.5em}
+  {\itshape\fontsize{90}{60}\selectfont\raisebox{-0.15ex}{✠}}\hspace{1.5em}
+  {\itshape\huge\raisebox{1.9ex}{-}}
+  \hfill}
 
   \vfill\vfill\vfill
 
@@ -221,9 +226,14 @@
 \begin{center}
 {\bfseries\fontsize{40}{60}\textsc{Lìber Psalmórum}}
 
-\vspace*{3\baselineskip}
+\vspace*{2\baselineskip}
 
-{\itshape\fontsize{100}{60}\selectfont\raisebox{-0.15ex}{✠}}
+%{\itshape\fontsize{100}{60}\selectfont\raisebox{-0.15ex}{✠}}
+\includegraphics[width=0.25\textwidth]{images/harp}
+
+\vspace*{2\baselineskip}
+
+{\bfseries\fontsize{40}{60}\textsc{Davídis}}
 
 \end{center}
 
