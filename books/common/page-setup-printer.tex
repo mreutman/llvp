@@ -1,0 +1,75 @@
+\usepackage[none]{hyphenat}
+\usepackage{everysel}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{svg}
+
+\setstretch{1.5}
+\setlength{\emergencystretch}{3em}
+\raggedbottom
+
+\usepackage[
+  papersize={8.5in,11in},
+  layout=letterpaper,
+  right=1.0in,
+  left=1.0in,
+  lines=32,
+  %top=0.8in,
+  %headheight=14.5pt,
+  %includehead,
+  heightrounded,
+]{geometry}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0pt}
+
+% Page border %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\AddToShipoutPictureBG{
+  \ifnum\enablePageBorder>0
+  \ifnum\value{page}>\pageBorderBegin % page to begin drawing border
+  \begin{tikzpicture}[overlay,remember picture]
+  \draw [line width=3pt]
+    ($ (current page.north west) + (0.75in,-0.55in) $)
+    rectangle
+    ($ (current page.south east) + (-0.75in,0.55in) $);
+  \draw [line width=0.75pt]
+    ($ (current page.north west) + (0.8in,-0.60in) $)
+    rectangle
+    ($ (current page.south east) + (-0.8in,0.60in) $); 
+  \end{tikzpicture}%
+  \fi
+  \fi
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setmainfont[
+  Path = ./common/fonts/dueblo/mod/,
+  Extension = .otf,
+  UprightFont = *-MED,
+  BoldFont = *-BOL,
+  ItalicFont = *-REG,
+  BoldItalicFont = *-REG,
+  Ligatures = {NoCommon, NoDiscretionary},
+  Numbers=Tabular,
+]{Dueblo-SEMI-EXT}
+
+\newcommand{\defaultFontSize}{\large}
+\newcommand{\defaultFirstLetterSize}{\huge}
+
+\newcommand{\firstLetter}[1]{{\defaultFirstLetterSize #1}}
+
+\newcommand{\formatTextChapter}
+{\defaultFontSize\bfseries\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1.0em}
+
+\newcommand{\formatTextHeader}
+{\itshape\addfontfeature{LetterSpace=5.0}\fontdimen2\font=0.5em}
+
+\newcommand{\formatTextRepeat}
+{\itshape\footnotesize\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1.0em}
