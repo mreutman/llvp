@@ -63,7 +63,7 @@
 \newcommand{\defaultFontSize}{\large}
 \newcommand{\defaultFirstLetterSize}{\huge}
 
-\newcommand{\firstLetter}[1]{{\defaultFirstLetterSize #1}}
+% Formats
 
 \newcommand{\formatTextChapter}
 {\defaultFontSize\bfseries\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1.0em}
@@ -73,3 +73,16 @@
 
 \newcommand{\formatTextRepeat}
 {\itshape\footnotesize\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1.0em}
+
+\newcommand{\formatTextSection}
+{\Huge\bfseries\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1.0em}
+
+% Functions
+
+\newcommand{\documentChapter}[1]
+{{\hfill{\formatTextChapter #1}\hfill}\vspace*{1\baselineskip}}
+
+\newcommand{\documentSection}[1]
+{{\hfill{\formatTextChapter #1}\hfill}\vspace*{1\baselineskip}}
+
+\newcommand{\firstLetter}[1]{{\defaultFirstLetterSize #1}}
