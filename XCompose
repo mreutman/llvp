@@ -5,17 +5,10 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key>     <exclam>       : "¡"
 <Multi_key>     <question>     : "¿"
 
-<Multi_key>     <2>            : "ĕ"
-<Multi_key>     <at>           : "ë"
-<Multi_key>     <3>            : "ē"
-<Multi_key>     <4>            : "ū"
-<Multi_key>     <5>            : "ī"
-
-<Multi_key>     <7>            : "į"
-<Multi_key>     <ampersand>    : "Į"
-<Multi_key>     <8>            : "ų"
-<Multi_key>     <asterisk>     : "Ų"
-
+<Multi_key>     <3>            : "ë"
+<Multi_key>     <dollar>       : "Ů"
+<Multi_key>     <4>            : "ů"
+<Multi_key>     <5>            : "ü"
 
 <Multi_key>     <apostrophe> : "à"
 <Multi_key>     <quotedbl>   : "À"
