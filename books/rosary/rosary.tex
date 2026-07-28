@@ -1,403 +1,83 @@
 \documentclass[twoside,11pt]{book}
-\newcommand{\enablePageBorder}{1}
+%\documentclass[twoside,11pt,showframe]{book}
+\newcommand{\pageBorderEnable}{1}
 \newcommand{\pageBorderBegin}{0}
+\newcommand{\pageHeaderEnable}{0}
+\newcommand{\pageHeaderStart}{0}
 
 \input{common/page-setup-printer}
+
+\newcommand{\formatTextCount}
+{\tiny}
+
+\newcommand{\formatTextReference}
+{\itshape\small}
+
+\newcommand{\mysteryChapter}[1]{%
+  \vspace*{0.05\baselineskip}
+  \hfill%
+  {\formatTextChapter #1}%
+  \hfill%
+  %\setPageHeader{#1}%
+  \vspace*{1.0\baselineskip}
+}
+
+\newcommand{\mysteryCount}[1]{%
+  \textsuperscript{\formatTextCount#1.~~}%
+}
+
+\newcommand{\mysteryReference}[1]{%
+  {\newline\documentNote{\MakeLowercase{#1}}{0em}}
+  \vfill
+}
+
+\newcommand{\mysteryEnd}{\newpage}
+
+\newcommand{\skipI}{\vspace*{1\baselineskip}}
 
 \pagestyle{empty}
 
 \begin{document}
 
-\scshape\defaultFontSize
+\vspace*{0.5\baselineskip}
 
-\documentSection{Rosárium}
+\documentSection{Rosárium}\vspace*{1.5\baselineskip}
 
-\firstLetter{D}òmine, lábia mea apèriēs, et os meum annunziábit laudem tuam. Deus in adįutórium meum intènde; Dòmine, ad adįuvàndum me festína. Per oraziónēs Sanctórum Patrum nostrórum, Dòmine Deus noster, Įesu Chrîste, miserére nostri et salva nos. Amen.\vspace*{1\baselineskip}
+\documentNote{ìnċipit~:}{2.5em}
 
-Glória tìbi, Dòmine; glória tìbi.\vspace*{1\baselineskip}
+\input{tmp/labia-mea-aperies}\vspace*{1\baselineskip}
 
-\input{text/oraziones/symbolum-apostolorum}\vspace*{1\baselineskip}
+\input{tmp/per-oraziones-sanctorum-patrum}\skipI
 
-Glória Patri, et Fílio, et Spirìtui Sâncto, et nunc et semper, et in sáecula saeculórum. Amen.\vspace*{1\baselineskip}
+\input{tmp/gloria-tibi}\vspace*{1\baselineskip}
 
-\input{text/oraziones/pater-noster}\vspace*{1\baselineskip}
+\input{tmp/symbolum-apostolorum}\vspace*{1\baselineskip}
 
-\input{text/oraziones/ave-maria}\vspace*{1\baselineskip}
+\input{tmp/axion-estin}\vspace*{1\baselineskip}
 
-\input{text/oraziones/salve-regina}\vspace*{1\baselineskip}
+\documentNoteRepeat{iij}{2.5em}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Joyful
-\documentChapter{Primum Mystèrium Gaudiósum: Annunziázio}
+\input{tmp/ave-maria}\vspace*{1\baselineskip}
 
-Rm	5	12	Proptèrea sicut per unum hòminem peccátum in hunc mundum intrávit, et per peccátum mors, et ita in omnēs hòminēs mors pertransívit, in quo omnēs peccavérunt.
+\input{tmp/gloria-patri}\vspace*{1\baselineskip}
 
-Jo	3	17	Non ènim misit Deus Fílium suum in mundum ut įúdicet mundum, sed ut salvétur mundus per ipsum.
+\input{tmp/pater-noster}\newpage%\vspace*{1\baselineskip}
 
-Mt	1	18	Chrîsti autem ģenerázio sic èrat: quum esset desponsáta mater eįus María Įoséfo, àntequam convenírent, invènta est in útero hàbens de Spíritu sâncto.
+\documentNote{conclúsio~:}{2.5em}
 
-Lc	1	26	In mense autem sexto, missus est àngelus Gábriel a Deo in çivitátem Galiléae, cui nomen Názareth,
-Lc	1	27	ad vírģinem desponsátam viro, cui nomen èrat Įoséfus, de domu Davídis: et nomen vírģinis María.
+\input{tmp/salve-regina}\skipI
 
-Lc	1	31	Ecçe conçìpiēs in útero, et pàriēs fílium, et vocábis nomen eįus Įesum.
+Dòmine, miserére. Crîste, miserére. Dòmine, miserére.\skipI
 
-Lc	1	32	Hic èrit magnus, et Fílius Altìssimi vocábitur, et dabit illi Dòminus Deus sedem Davídis patris eįus; et regnábit in domu Įacóbi in aetèrnum.
+\input{tmp/per-oraziones-sanctorum-patrum}
 
-Lc 1 35 Spíritus sânctus supervèniet in te, et virtus Altìssimi obumbrábit tìbi; ideóque et quod nasçétur ex te sânctum, vocábitur Fílius Dei.
+\newpage
 
-Lc	1	38	Dîxit autem María: «~Ecçe ançìlla Dòmini; fiat mìhi secùndum verbum tuum.~» Et disçèssit ab illa àngelus.
+\indentOn
 
-Rm	5	19	Sicut ènim per inoboediènziam únius hòminis, peccatórēs constitúti sunt multi; ita et per únius oboediziónem, įûsti constituèntur multi.
+\input{tmp/rosarium.tex}
 
-Lc	1	37	quia non èrit impossìbile àpud Deum omne verbum.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Secùndum Mystèrium Gaudiósum: Visitázio
-
-Lc	1	40	Et intrávit in domum Zacharíae, et salutávit Elisabéțam.
-
-Lc 1 13 Aeit autem ad illum àngelus: «~Ne tìmeas Zacharía, quóniam exaudíta est deprecázio tua; et ûxor tua Elisabéța pàriet tìbi fílium, et vocábis nomen eįus Įohànnem.~»
-
-Lc	1	42	Et exclamávit Elisabéța voçe magna, et dîxit: «~Benedìcta tu inter mulíerēs, et benedìctus frûctus ventris tui.~»
-
-Lc	1	45	«~Et beáta, quae credidìsti, quóniam perfiçièntur ea, quae dicta sunt tibi a Dòmino.~»
-
-Mt	1	18	Chrîsti autem ģenerázio sic erat: quum esset desponsáta mater eįus María Įoséfo, àntequam convenírent, invènta est in útero hàbens de Spíritu Sâncto.
-
-Lc	1	46	Et aeit María: «~Magnìficat ànima mea Dòminum,
-Lc	1	47	et exsultávit spíritus meus in Deo salutári meo.~»
-
-Lc	1	48	«~Quia respèxit humilitátem ançìllae suae; ecçe ènim ex hôc beátam me diçent omnēs generaziónēs.~»
-
-Lc	1	49	«~Quia feçit mìhi magna qui pòtens est, et sânctum nomen eįus.
-Lc	1	50	Et misericórdia eįus a proģènie in proģèniēs timèntibus eum.~»
-
-Lc	1	54	Susçépit Ìsraël púerum suum, recordátus misericórdiae suae.
-Lc	1	55	Sicut locútus est ad patrēs nostros, Abraham et sémini eius in sǽcula.
-
-Lc	1	56	Mansit autem María cum illa quasi mènsibus tribus, et revèrsa est in domum suam.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Tèrzium Mystèrium Gaudiósum: Natívitas 
-
-Michéas 5:2 Et tu Bețlehémum Efráța, párvulus es in mílibus Įuda, ex te mìhi egrediétur qui sit dominátor in Israéle, et egrèssus eįus ab inìzio a diébus aeternitátis.
-
-Lc	2	4	Asçèndit autem et Įoséfus a Galiléa de çivitáte Nazaréța in Įudéam, in çivitátem Davídis, quae vocátur Bethlehémum, éoquod esset de domo, et família Davídis.
-
-Lc	2	7	Et pèperit Fílium suum primoģènitum, et pannīs eum invòlvit, et reclinávit eum in praesáepio, quia non èrat eīs locus in deversório.
-
-Lc	2	10	Et dîxit pastóribus àngelus: «~Nolíte timére; ecçe ènim evangelíso vobīs gáudium magnum, quod èrit omni pòpulo,
-Lc	2	11	quia natus est vobīs hódie Salvátor, qui est Chrîstus Dòminus, in çivitáte David.~»
-
-Lc	2	14	«~Glória in altìssimis Deo, et in terra pâx homìnibus bonae voluntátis.~»
-
-Lc	2	16	Et pastórēs vēnérunt festinàntēs, et invēnérunt Maríam, et Įoséfum, et infàntem pòsitum in praesáepio.
-Lc	2	17	Vidèntēs autem cognovérunt de verbo, quod dictum èrat illīs de púero hôc.
-
-Mt	2	1	Quum ergo natus esset Įesus in Bețlehémo Įudéae in diébus Heródis reģis, ecçe magi ab oriènte vēnérunt Hierosòlymam,
-Mt	2	2	diçèntēs: «¿~Ubi est qui natus est rêx Įudeórum~? Vídimus ènim stellam eįus in oriènte, et vénimus adoráre eum.~»
-
-Ps 71:12 Et adorábunt eum omnēs reģēs terrae; omnēs ģentēs sèrvient ei.
-
-Lc	2	19	María autem conservábat òmnia verba haec, cònferens in corde suo.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Quârtum Mystèrium Gaudiósum: Presentázio
-
-Lc	2	21	Et postquam consummáti sunt diēs octo, ut zircumciderétur puer, vocátum est nomen eįus Įesus, quod vocátum est ab àngelo priùsquam in útero conçiperétur.
-
-Ac	4	12	Et non est in álio áliquo sàlūs; nec ènim áliud nomen est sub coelo datum homìnibus, in quo opòrteat nos salvos fíeri.
-
-Jo	16	23	Aeit ènim Jesus: «~Amen, amen diço vobīs: si quid petierítis Patrem in nómine meo, dabit vobīs.~»
-
-Psalmus 85:5 Quóniam tu, Dòmine, sųavis et mítis, et mùltae misericòrdiae òmnibus invocàntibus te.
-
-Lc	2	22	Et postquam impléti sunt diēs purgaziónis eįus secùndum leģem Moýsis, tulérunt illum in Hierosòlymam, ut sìsterent eum Dòmino.
-
-Lc	2	34	Et benedîxit illīs Sỳmeon, et dîxit ad Maríam matrem eįus: «~Ecçe pòsitus est hic in ruínam et in resurrecziónem multórum in Israéle; et in signum cui contradiçétur.~»
-
-Lc	2	35	«~Et tuam ìpsius ànimam pertransíbit gládius, ut revelèntur ex multīs còrdibus coģitaziónēs.~»
-
-Lc	2	39	Et ut perfeçérunt òmnia secùndum leģem Dòmini, revèrsi sunt in Galiléam in çivitátem suam Nazaréțam.
-
-Lc	2	40	Puer autem cresçébat, et confortabátur plenus sapiènzia, et grázia Dei èrat in illo.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Quîntum Mystèrium Gaudiósum: Invènzio in Templo
-
-Lc	2	42	Et quum factus esset annórum duódeçim, asçendèntibus illīs Hierosòlymam secùndum consųetúdinem diéi fêsti.
-
-Lc	2	43	Consummatîsque diébus, quum redírent, remànsit puer Įesus in Hierosòlymam, et non cognovérunt parèntēs eįus.
-
-Lc	2	45	Et non invenièntēs, regrèssi sunt in Hierosòlymam, requirèntēs eum.
-
-Lc	2	46	Et factum est, post tríduum invēnérunt illum in templo sedèntem in mèdio doctórum, audièntem illos, et interrogàntem eos.
-
-Lc	2	49	Et aeit Jesus ad illos: «¿~Quid est quod me quaerebátis~? Nesçiebátis quia in hîs, quae Patris mei sunt, opòrtet me esse?
-
-Lc	2	51	Et desçèndit cum eīs, et vènit in Nazaréțam, et èrat sùbditus illīs. Et mater eįus conservábat òmnia verba haec in corde suo.
-
-Mt	15	4	Nam Deus dîxit: «~Honóra patrem et matrem~», et, «~qui maledíxerit patri vel matri, morte moriátur.~»
-
-Jo	14	15	Si dilìģitis me, mandáta mea serváte.
-
-1 John 3:18 Filíoli mei, non diliģámus verbo nec lingųa, sed ópere et veritáte.
-
-Lc	2	52	Et Įesus profiçiébat sapiénzia, et aetáte, et grázia apud Deum et hòminēs.
-
-% Sorrowful
-
-Primum Mystèrium Dolorósum: Cruçiátus in Horto
-
-Mt	26	36	Tunc venit Įesus cum illīs in villam, quae díçitur Gețsémane, et dîxit disçìpulīs suīs: «~Sedéte hic donec vadam illuc et orem.~»
-
-Mt	26	37	Et assûmpto Pètro, et duóbus fíliīs Zebedéi, coepit contristári et moestus esse.
-
-Mt	26	38	Tunc ait illis: Trîstis est ànima mea usque ad mortem; sustinéte hîc, et viģiláte mecum.
-
-Mt	26	39	Et progrèssus pusìllum, próçidit in fàçiem suam, orans, et diçens: «~Mi Pater, si possìbile est, trànseat a me calix iste; verùmtamen non sicut ego vòlo, sed sicut tu.
-
-Lc	22	44	Et factus est sudor eįus sicut guttae sàngųinis decurrèntis in terram.
-
-Mt	26	40	Et vènit ad disçìpulos suos, et invènit eos dormiéntes, et diçit Pètro: «~Sic non potuìstis una hora viģiláre mecum~?»
-
-Mt	26	41	«~Viģiláte, et oráte ut non intrétis in temptaziónem. Spíritus quìdem promptus est, caro autem infìrma.~»
-
-Mt	26	48	Qui autem trádidit eum, dedit illīs signum, diçens: «~Quemcùmque osculátus fúero, ipse est, tenéte eum.~»
-
-Lc	22	54	Comprehendèntēs autem eum, duxérunt ad domum prînçipis sacerdótum; Pètrus vero sequebátur a longe.
-
-Mt	26	56	Hoc autem totum factum est, ut adimplerèntur Scriptúrae profetárum. Tunc disçìpuli omnes, relìcto eo, fuģérunt.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Secùndum Mystèrium Dolorósum: Flaģellázio
-% NEEDS diacritics
-
-Jo	18	19	Póntifex ergo interrogávit Iesum de discípulis suis, et de doctrína eius.
-
-
-Jo	18	20	Respóndit ei Iesus:
-Jo	18	21	Quid me intérrogas? intérroga eos, qui audiérunt quid locútus sim ipsis: ecce hi sciunt quæ díxerim ego.
-
-
-Jo	18	22	Hæc autem cum dixísset, unus assístens ministrórum dedit álapam Iesu, dicens: Sic respóndes pontífici?
-Jo	18	24	Et misit eum Annas ligátum ad Caípham pontíficem.
-
-Mt	26	59	Príncipes autem sacerdótum, et omne concílium, quærébant falsum testimónium contra Iesum, ut eum morti tráderent:
-
-Jo	18	25	Erat autem Simon Petrus stans, et calefáciens se. Dixérunt ergo ei: Numquid et tu ex discípulis eius es? Negávit ille, et dixit: Non sum.
-
-Mc	15	1	Et conféstim mane consílium faciéntes summi sacerdótes cum senióribus, et scribis, et univérso concílio, vinciéntes Iesum, duxérunt, et tradidérunt Piláto.
-
-Jo	18	38	Pilátus exívit ad Iudǽos, et dicit eis: Ego nullam invénio in eo causam.
-Mc	15	15	Pilátus autem volens pópulo satisfácere, dimísit illis Barábbam,
-
-Jo	19	1	Tunc ergo apprehéndit Pilátus Iesum, et flagellávit.
-
-Isiah 53:4 Vere languores nostros ipse tulit, et dolores nostros ipse portavit, et nos putavimus eum quasi leprosum, et percussum a Deo humiliatum
-
-Isiah 53:5 Ipse autem vulneratus est propter iniquitates nostras, attritus est propter scelera nostra; disciplina pacis nostrae super eum, et livore eius sanati sumus
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Tèrzium Mystèrium Dolorósum: Coronázio cum Spinīs
-
-Jo	18	33	Introívit ergo íterum in prætórium Pilátus: et vocávit Iesum, et dixit ei: Tu es rex Iudæórum?
-
-Jo	18	36	Respóndit Iesus: Regnum meum non est de hoc mundo. Si ex hoc mundo esset regnum meum, minístri mei útique decertárent ut non tráderer Iudǽis: nunc autem regnum meum non est hinc.
-
-Jo	18	37	Dixit ítaque ei Pilátus: Ergo rex es tu? Respóndit Iesus: Tu dicis quia rex sum ego. Ego in hoc natus sum, et ad hoc veni in mundum, ut testimónium perhíbeam veritáti: omnis, qui est ex veritáte, audit vocem meam.
-
-Mt	27	27	Tunc mílites prǽsidis suscipiéntes Iesum in prætórium, congregavérunt ad eum univérsam cohórtem:
-Mt	27	28	et exuéntes eum, chlámydem coccíneam circumdedérunt ei,
-
-Mt	27	29	et plecténtes corónam de spinis, posuérunt super caput eius, et arúndinem in déxtera eius. Et genu flexo ante eum, illudébant ei, dicéntes: Ave rex Iudæórum.
-
-Mc	15	19	Et percutiébant caput eius arúndine: et conspuébant eum, et ponéntes génua, adorábant eum.
-
-Jo	19	5	(Exívit ergo Iesus portans corónam spíneam, et purpúreum vestiméntum.) Et dicit eis Pilátus: Ecce homo.
-
-Jo	19	6	Cum ergo vidíssent eum pontífices, et minístri, clamábant, dicéntes: Crucifíge, crucifíge eum. Dicit eis Pilátus: Accípite eum vos, et crucifígite: ego enim non invénio in eo causam.
-
-Jo	19	15	Illi autem clamábant: Tolle, tolle, crucifíge eum. Dicit eis Pilátus: Regem vestrum crucifígam? Respondérunt pontífices: Non habémus regem, nisi Cǽsarem.
-
-Isiah 53:7 Oblatus est quia ipse voluit, et non aperuit os suum; sicut ovis ad occisionem ducetur, et quasi agnus coram tondente se obmutescet, et non aperiet os suum.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Quârtum Mystèrium Dolorósum: Baįulázio Cruçis
-
-Jo	19	17	Et báiulans sibi crucem exívit in eum, qui dícitur Calváriæ locum, hebráice autem Gólgotha:
-
-Lc	14	27	Et qui non báiulat crucem suam, et venit post me, non potest meus esse discípulus.
-
-Mt	11	29	Tóllite iugum meum super vos, et díscite a me, quia mitis sum, et húmilis corde: et inveniétis réquiem animábus vestris.
-
-Mt	11	30	Iugum enim meum suáve est, et onus meum leve.
-
-Lc	9	24	Qui enim volúerit ánimam suam salvam fácere, perdet illam: nam qui perdíderit ánimam suam propter me, salvam fáciet illam.
-
-Lc	9	25	Quid enim próficit homo, si lucrétur univérsum mundum, se autem ipsum perdat, et detriméntum sui fáciat?
-
-Rm	8	18	Exístimo enim quod non sunt condígnæ passiónes huius témporis ad futúram glóriam, quæ revelábitur in nobis.
-
-Lc	23	26	Et cum dúcerent eum, apprehendérunt Simónem quemdam Cyrenénsem veniéntem de villa: et imposuérunt illi crucem portáre post Iesum.
-
-Lc	23	28	Convérsus autem ad illas Iesus, dixit: Fíliæ Ierúsalem, nolíte flere super me, sed super vos ipsas flete, et super fílios vestros.
-
-Ga	6	14	Mihi autem absit gloriári, nisi in cruce Dómini nostri Iesu Christi: per quem mihi mundus crucifíxus est, et ego mundo.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Quîntum Mystèrium Dolorósum: Cruçifîxio
-
-Lc	23	33	Et postquam venérunt in locum, qui vocátur Calváriæ, ibi crucifixérunt eum: et latrónes, unum a dextris, et álterum a sinístris.
-
-Lc	23	34	Iesus autem dicébat: Pater dimítte illis: non enim sciunt quid fáciunt. Dividéntes vero vestiménta eius, misérunt sortes.
-
-Lc	23	42	Et dicébat ad Iesum: Dómine, meménto mei, cum véneris in regnum tuum.
-Lc	23	43	Et dixit illi Iesus: Amen dico tibi: hódie mecum eris in paradíso.
-
-Jo	19	26	Cum vidísset ergo Iesus matrem, et discípulum stantem, quem diligébat, dicit matri suæ: Múlier, ecce fílius tuus.
-
-Jo	19	27	Deínde dicit discípulo: Ecce mater tua. Et ex illa hora accépit eam discípulus in sua.
-
-Mt	27	45	A sexta autem hora ténebræ factæ sunt super univérsam terram usque ad horam nonam.
-
-Mt	27	46	Et circa horam nonam clamávit Iesus voce magna, dicens: Eli, Eli, lamma sabactháni? hoc est: Deus meus, Deus meus, ut quid dereliquísti me?
-
-Jo	15	13	Maiórem hac dilectiónem nemo habet, ut ánimam suam ponat quis pro amícis suis.
-
-Jo	19	30	Cum ergo accepísset Iesus acétum, dixit: Consummátum est. Et inclináto cápite trádidit spíritum.
-
-Lc	23	46	Et clamans voce magna Iesus ait: Pater, in manus tuas comméndo spíritum meum. Et hæc dicens, exspirávit.
-
-% Glorious
-
-Primum Mystèrium Gloriósum: Resurrêczio 
-
-Lc	24	1	Una autem sábbati valde dilúculo mulieres venérunt ad monuméntum, portántes, quæ paráverant arómata:
-Lc	24	2	et invenérunt lápidem revolútum a monuménto.
-Lc	24	3	Et ingréssæ non invenérunt corpus Dómini Iesu.
-
-Mt	28	6	Non est hic: surréxit enim, sicut dixit: veníte, et vidéte locum, ubi pósitus erat Dóminus.
-
-Jo	20	19	Cum ergo sero esset die illo, una sabbatórum, et fores essent clausæ, ubi erant discípuli congregáti propter metum Iudæórum: venit Iesus, et stetit in médio, et dixit eis: Pax vobis.
-
-Jo	20	24	Thomas autem unus ex duódecim, qui dícitur Dídymus, non erat cum eis quando venit Iesus.
-Jo	20	25	et dixit: Nisi vídero in mánibus eius fixúram clavórum, et mittam dígitum meum in locum clavórum, et mittam manum meam in latus eius, non credam.
-
-Jo	20	26	Venit Iesus iánuis clausis, et stetit in médio, et dixit: Pax vobis.
-Jo	20	27	Deínde dicit Thomæ: Infer dígitum tuum huc, et vide manus meas, et affer manum tuam, et mitte in latus meum: et noli esse incrédulus, sed fidélis.
-
-Jo	20	29	Dixit ei Iesus: Quia vidísti me Thoma, credidísti: beáti, qui non vidérunt, et credidérunt.
-
-Mc	16	16	Qui credíderit, et baptizátus fúerit, salvus erit: qui vero non credíderit, condemnábitur.
-
-Ep	2	8	Grátia enim estis salváti per fidem, et hoc non ex vobis: Dei enim donum est:
-
-Jo	11	25	Dixit ei Iesus: Ego sum resurréctio, et vita: qui credit in me, étiam si mórtuus fúerit, vivet:
-Jo	11	26	et omnis, qui vivit, et credit in me, non moriétur in ætérnum. Credis hoc?
-
-Mc	9	22	Iesus autem ait illi: Si potes crédere, ómnia possibília sunt credénti.
-Mc	9	23	Et contínuo exclámans pater púeri, cum lácrymis aiébat: Credo, Dómine: ádiuva incredulitátem meam.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Secùndum Mystèrium Gloriósum: Asçènsio
-
-Jo	20	17	Dicit Maríae Magdalénae Iesus: Noli me tángere, nondum enim ascéndi ad Patrem meum: vade autem ad fratres meos, et dic eis: Ascéndo ad Patrem meum, et Patrem vestrum, Deum meum, et Deum vestrum.
-
-Jo	14	2	In domo Patris mei mansiónes multæ sunt: si quo minus dixíssem vobis: quia vado paráre vobis locum.
-
-Jo	14	3	Et si abíero, et præparávero vobis locum, íterum vénio, et accípiam vos ad meípsum: ut ubi sum ego, et vos sitis.
-
-Mt	28	19	Eúntes ergo docéte omnes gentes: baptizántes eos in nómine Patris, et Fílii, et Spíritus sancti:
-
-Jo	10	16	Et álias oves hábeo, quæ non sunt ex hoc ovíli: et illas opórtet me addúcere, et vocem meam áudient, et fiet unum ovíle, et unus pastor.
-
-Mt	28	20	docéntes eos serváre ómnia quæcúmque mandávi vobis: et ecce ego vobíscum sum ómnibus diébus, usque ad consummatiónem sǽculi.
-
-Jo	15	16	Non vos me elegístis, sed ego elégi vos, et pósui vos ut eátis, et fructum afferátis, et fructus vester máneat: ut quodcúmque petiéritis Patrem in nómine meo, det vobis.
-
-Jo	14	6	Dicit ei Iesus: Ego sum via, et véritas, et vita. Nemo venit ad Patrem, nisi per me.
-
-Jo	12	32	Et ego, si exaltátus fúero a terra, ómnia traham ad meípsum.
-
-Mc	16	19	Et Dóminus quidem Iesus postquam locútus est eis, assúmptus est in cælum, et sedet a dextris Dei.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Tèrzium Mystèrium Gloriósum: Desçènsus Spíritus Sâncti
-
-Ac	2	1	Et cum compleréntur dies Pentecóstes, erant omnes páriter in eódem loco:
-
-Ac	2	2	et factus est repénte de cælo sonus, tamquam adveniéntis spíritus veheméntis, et replévit totam domum ubi erant sedéntes.
-
-Ac	2	3	Et apparuérunt illis dispertítæ linguæ tamquam ignis, sedítque supra síngulos eórum:
-
-Ac	2	4	et repléti sunt omnes Spíritu sancto, et cœpérunt loqui váriis linguis, prout Spíritus sanctus dabat éloqui illis.
-
-Ac	2	6	Facta autem hac voce, convénit multitúdo, et mente confúsa est, quóniam audiébat unusquísque lingua sua illos loquéntes.
-
-Ac	2	17	Et erit in novíssimis diébus, dicit Dóminus, effúndam de Spíritu meo super omnem carnem: et prophetábunt fílii vestri, et fíliæ vestræ, et iúvenes vestri visiónes vidébunt, et senióres vestri sómnia somniábunt.
-
-Ac	2	18	Et quidem super servos meos, et super ancíllas meas, in diébus illis effúndam de Spíritu meo, et prophetábunt:
-
-Ac	2	21	Et erit: omnis, quicúmque invocáverit nomen Dómini, salvus erit.
-
-Ac	2	32	Hunc Iesum resuscitávit Deus, cuius omnes nos testes sumus.
-Ac	2	33	Déxtera ígitur Dei exaltátus, et promissióne Spíritus sancti accépta a Patre, effúdit hunc, quem vos vidétis, et audítis.
-
-Ac	2	36	Certíssime sciat ergo omnis domus Israel, quia et Dóminum eum, et Christum fecit Deus hunc Iesum, quem vos crucifixístis.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Quârtum Mystèrium Gloriósum: Dormízio
-
-Lc	11	27	Factum est autem, cum Jesus hæc díceret: extóllens vocem quædam múlier de turba dixit illi: Beátus venter, qui te portávit, et úbera, quæ suxísti.
-
-Lc	11	28	At ille dixit: Quinímmo beáti, qui áudiunt verbum Dei, et custódiunt illud.
-
-131^8^x^Sùrģe Dòmine in rèquiem tuam, tu et arca sanctificaziónis tuae.
-
-131^11^x^Įurávit Dòminus Davídi veritátem, et non frustrábitur eam.
-
-15^10^x^Quóniam non derelìnquēs ànimam meam in infèrno, nec dabis sânctum tuum vidére corrupziónem.
-
-Lc	1	46,47	Magníficat ánima mea Dóminum, et exsultávit spíritus meus in Deo salutári meo.
-
-Lc	1	48	Quia respéxit humilitátem ancíllæ suæ: ecce enim ex hoc beátam me dicent omnes generatiónes,
-
-Rm	6	5	Si enim complantáti facti sumus similitúdini mortis eius: simul et resurrectiónis érimus.
-
-Jo	14	3	Et si abíero, et præparávero vobis locum, íterum vénio, et accípiam vos ad meípsum: ut ubi sum ego, et vos sitis.
-
-Ap	11	19	Et apértum est templum Dei in cælo: et visa est arca testaménti eius in templo eius,
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Quîntum Mystèrium Gloriósum: Coronázio 
-
-Ap	12	1	Et signum magnum appáruit in cælo: múlier amícta sole, et luna sub pédibus eius, et in cápite eius coróna stellárum duódecim:
-
-Song of Solomon 6:9 Quaenam est haec prospiciens tamquam diluculum, speciosa sicut luna, electa sicut sol, miraculum sicut ornatus?
-
-Si	24	23	Ego quasi vitis fructificávi suavitátem odóris: et flores mei fructus honóris et honestátis.
-
-Si	24	3	et in médio pópuli sui exaltábitur, et in plenitúdine sancta admirábitur,
-Si	24	4	et in multitúdine electórum habébit laudem, et inter benedíctos benedicétur
-
-Si	24	24	Ego mater pulchræ dilectiónis, et timóris, et agnitiónis, et sanctæ spei.
-Si	24	25	In me grátia omnis viæ et veritátis, in me omnis spes vitæ et virtútis.
-
-Si	24	26	Transíte ad me omnes qui concupíscitis me, et a generatiónibus meis implémini:
-Si	24	27	spíritus enim meus super mel dulcis, et heréditas mea super mel et favum:
-Si	24	28	memória mea in generatiónes sæculórum.
-
-Si	24	30	Qui audit me, non confundétur: et qui operántur in me, non peccábunt.
-Si	24	31	Qui elúcidant me, vitam ætérnam habébunt.
-
-Si	24	45	Penetrábo omnes inferióres partes terræ, et inspíciam omnes dormiéntes, et illuminábo omnes sperántes in Dómino.
-
-% GET LXX, Vetus Latina 1, pg 781 (887)
-Jdt	13	22	Univérsi autem adorántes Dóminum, dixérunt ad eam: Benedíxit te Dóminus in virtúte sua, quia per te ad níhilum redégit inimícos nostros.
-
-Jdt	13	23	Porro Ozías princeps pópuli Israel dixit ad eam: Benedícta es tu fília a Dómino Deo excélso præ ómnibus muliéribus super terram.
+\indentOff
 
 \end{document}
 

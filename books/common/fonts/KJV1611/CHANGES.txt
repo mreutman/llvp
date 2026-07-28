@@ -1,0 +1,13 @@
+CHANGE LIST
+-Replace default 'Z' character with "Capital Zeta" character.
+-Modify question marks; rotate hook counterclockwise by 49 degrees and add space between dot.
+-Reduce top hook of 'f'.
+-Increase mid horizontal bar of 'f'.
+-Add kerning lookup table for 'f' and accented vowels to reduce horizontal space.
+-Increase to 'x' bottom left stem.
+-Modify kerning of non-ligature 'fi' pair. Remove entry in original GPOS "kern for f longs etc".
+-C/G/c/g dot accent reduce scale to 90%.
+-c/g dot accent move down 26 points.
+-c dot accent align dot with top crest.
+-'ů' move ring down by 20 points; about same vertical seperation as 'Ů'.
+-'w' move down to same y-height as 'u'; reduce height of left half of glyph; extend outside left stem.

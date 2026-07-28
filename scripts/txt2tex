@@ -1,0 +1,68 @@
+#! /usr/bin/env python3
+
+import argparse
+import os
+import re
+import sys
+
+from pathlib import Path
+
+KEY_PRINTER_LINEBREAK = "$PRX"
+KEY_PRINTER_NEWPAGE   = "$PRP"
+TEX_LINEBREAK = "\\linebreak"
+TEX_NEWPAGE   = "\\newpage"
+
+parser = argparse.ArgumentParser(
+    description="Convert txt file to tex"
+)
+
+parser.add_argument(
+  "filename", type=Path, help="Input file path"
+)
+parser.add_argument(
+  "-a", "--amen", action="store_true", help="Add 'Amen' to the end of text."
+)
+parser.add_argument(
+  "-f", "--firstletter", action="store_true", help="Make first letter bigger"
+)
+
+args = parser.parse_args()
+
+path = Path(args.filename).expanduser().resolve()
+f = open(path, "r")
+
+line = f.readline()
+line_count = 0
+while line:
+  if '#' == line[0]:
+    line = f.readline()
+    continue
+
+  line = line.rstrip()
+  line = line.replace("¿", "¿~")
+  line = line.replace("?", "~?")
+  line = line.replace(";", "~;")
+  line = line.replace("«", "«~")
+  line = line.replace("»", "~»")
+  line = line.replace("?~»", "?»")
+  line = line.replace("«~¿", "«¿")
+  #line = line.replace("j", "į")
+  #line = line.replace("J", "Į")
+  #line = line.replace("w", "ų")
+  #line = line.replace("W", "Ų")
+
+  if line_count == 0 and args.firstletter:
+    first_char = line[0]
+    rest_of_line = line[1:]
+    line = f"\\firstLetter{{{first_char}}}{rest_of_line}"
+
+  line = line.replace(KEY_PRINTER_LINEBREAK, TEX_LINEBREAK)
+  line = line.replace(KEY_PRINTER_NEWPAGE, TEX_NEWPAGE)
+
+  print(line)
+
+  line = f.readline()
+  line_count += 1
+
+if args.amen:
+  print("Amen.")

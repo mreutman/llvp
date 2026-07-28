@@ -1,0 +1,51 @@
+#!/bin/python3
+import re
+import sys
+
+i = sys.argv[1]
+
+i = re.sub(r'ç', 'c', i)
+i = re.sub(r'Ç', 'C', i)
+i = re.sub(r'ģ', 'g', i)
+i = re.sub(r'Ģ', 'G', i)
+
+i = re.sub(r'Á', 'A', i)
+i = re.sub(r'Ó', 'O', i)
+i = re.sub(r'É', 'E', i)
+i = re.sub(r'Ú', 'U', i)
+i = re.sub(r'Í', 'I', i)
+i = re.sub(r'Ý', 'Y', i)
+
+i = re.sub(r'á', 'a', i)
+i = re.sub(r'ó', 'o', i)
+i = re.sub(r'é', 'e', i)
+i = re.sub(r'ú', 'u', i)
+i = re.sub(r'í', 'i', i)
+i = re.sub(r'ý', 'i', i)
+
+i = re.sub(r'À', 'A', i)
+i = re.sub(r'Ò', 'O', i)
+i = re.sub(r'È', 'E', i)
+i = re.sub(r'Ù', 'U', i)
+i = re.sub(r'Ì', 'I', i)
+i = re.sub(r'Ỳ', 'Y', i)
+
+i = re.sub(r'à', 'a', i)
+i = re.sub(r'ò', 'o', i)
+i = re.sub(r'è', 'e', i)
+i = re.sub(r'ù', 'u', i)
+i = re.sub(r'ì', 'i', i)
+i = re.sub(r'ỳ', 'i', i)
+
+i = re.sub(r'Ů', 'U', i)
+i = re.sub(r'ů', 'u', i)
+
+i = re.sub(r'W', 'U', i)
+i = re.sub(r'J', 'J', i)
+
+i = re.sub(r'w', 'u', i)
+i = re.sub(r'j', 'i', i)
+
+i = re.sub(r'~', '', i)
+
+print(i)
