@@ -89,7 +89,7 @@
 \newcommand{\psalmEndDecorate}[1]{%
 
   \vspace*{#1\baselineskip}
-  {\hfill \raisebox{0.25ex}{·} \hspace*{3.0em} {\Huge †} \hspace*{3.0em} \raisebox{0.25ex}{·} \hfill}
+  {\hfill \raisebox{0.72ex}{·} \hspace*{3.0em} {\Huge ✠} \hspace*{3.0em} \raisebox{0.72ex}{·} \hfill}
   \vspace*{#1\baselineskip}
 
 }
@@ -97,11 +97,14 @@
 \newcommand{\psalmEndDecorateNewPage}{%
 
   \vfill
-  {\hfill \raisebox{0.25ex}{·} \hspace*{2.0em} {\Huge †} \hspace*{2.0em} \raisebox{0.25ex}{·} \hfill}
+  {\hfill \raisebox{0.72ex}{·} \hspace*{2.0em} {\Huge ✠} \hspace*{2.0em} \raisebox{0.72ex}{·} \hfill}
   \vfill
   \newpage
 
 }
+
+\newcommand{\skipI}{\vspace*{1.0\baselineskip}}
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -143,11 +146,12 @@
 %\chead{\scshape\formatTextHeader Distribúzio Psalmórum}
 %\input{tables}
 
-%\chead{\scshape\formatTextHeader Orázio Inizális}
-%\input{beginning}
-
-%\chead{\formatTextHeader Psalmi Davidi}
 \large
+
+\chead{\formatTextHeader ORAZIO INIZIALIS}
+\input{beginning}
+
+
 \chead{\formatTextHeader PSALMI DAVIDI}
 
 \vspace*{1.0\baselineskip}
@@ -162,7 +166,7 @@
 
 \vspace*{2.0\baselineskip}
 
-\input{generated-psalmi}
+\input{tmp/psalmi}
 
 {\formatTextNote\Large\bfseries
 
@@ -176,6 +180,6 @@
 }
 
 %\chead{\scshape\formatTextHeader Ċàntica Bìblica}
-%\input{generated-cantica}
+%\input{tmp/cantica}
 
 \end{document}
