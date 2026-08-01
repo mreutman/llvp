@@ -15,13 +15,16 @@ all: latex pdf
 latex:
 	mkdir -p $(DIR_TMP)
 
+	$(call fntxt2tex, domine-miserere, )
 	$(call fntxt2tex, gloria-tibi, )
 	$(call fntxt2tex, gloria-patri, -a)
 	$(call fntxt2tex, labia-mea-aperies, -f)
 	$(call fntxt2tex, pater-noster, -f -a)
 	$(call fntxt2tex, per-oraziones-sanctorum-patrum, -f -a)
+	$(call fntxt2tex, rex-coelestis, -f)
 	$(call fntxt2tex, sanctus, )
 	$(call fntxt2tex, sanctissima-trinitas, )
+	$(call fntxt2tex, venite-adoremus-deum, -f)
 
 	./text/psalmi/generate-tex-psalmi.py > $(DIR_TMP)/psalmi.tex
 	./text/cantica/generate-tex-cantica.py > $(DIR_TMP)/cantica.tex

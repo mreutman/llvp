@@ -121,10 +121,13 @@
 {\notefont\scshape\addfontfeature{LetterSpace=15.0}\fontdimen2\font=0.75em}
 
 \newcommand{\formatTextNote}
-{\notefont\scshape\footnotesize\addfontfeature{LetterSpace=10.0}\fontdimen2\font=0.5em}
+{\notefont\scshape\footnotesize\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1em}
 
 \newcommand{\formatTextNoteRepeat}
 {\upshape\scriptsize}
+
+\newcommand{\formatTextNoteSection}
+{\notefont\scshape\Large\addfontfeature{LetterSpace=10.0}\fontdimen2\font=0.75em}
 
 \newcommand{\formatTextSection}
 {\Large\addfontfeature{LetterSpace=20.0}\fontdimen2\font=1.0em}
@@ -138,7 +141,7 @@
 {{\formatTextNote\hspace*{#2}#1}}
 
 \newcommand{\documentNoteRepeat}[2]
-{\documentNote{repetátur {\formatTextNoteRepeat #1} :}{#2}}
+{\documentNote{repetatur {\formatTextNoteRepeat #1} :}{#2}}
 
 \newcommand{\documentSection}[1]
 {{\hfill{\formatTextSection #1}\hfill}}
@@ -146,8 +149,7 @@
 \newcommand{\firstLetter}[1]{{\huge #1}}
 
 \newcommand{\indentOn}{%
-  \begin{flushleft}\hangindent=2em\hangafter=1
-  \leftskip=1.75em\rightskip=1.75em
+  \begin{flushleft}\hangindent=1.75em\hangafter=1
 }
 
 \newcommand{\indentOff}{%

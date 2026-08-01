@@ -3,7 +3,7 @@
 \newcommand{\pageBorderEnable}{1}
 \newcommand{\pageBorderBegin}{0}
 \newcommand{\pageHeaderEnable}{1}
-\newcommand{\pageHeaderStart}{1}
+\newcommand{\pageHeaderStart}{3}
 
 \input{common/page-setup-printer}
 
@@ -22,15 +22,23 @@
 \newcommand{\formatOdeCountNumber}
 {\small}
 
+\newcommand{\makeChapter}[2]{%
+  \hfill%
+  \phantom{0}\raisebox{0.35ex}[\ht\strutbox][\dp\strutbox]{\formatTextPsalmChapter\MakeLowercase{#1}}\phantom{0}%
+  \hfill%
+  \setPageHeader{#2}%
+}
+
+\newcommand{\makeVerse}[1]{%
+  {\formatTextVerseNumber\textsuperscript{#1. }}%
+}
+
 \newcommand{\odeChapter}[1]{%
-  \hfill%
-  {\formatTextPsalmChapter Ċànticum~~#1}%
-  \hfill%
-  \setPageHeader{#1}%
+  \makeChapter{Canticum #1}{#1}
 }
 
 \newcommand{\odeCount}[1]{%
-  \textsuperscript{\formatTextVerseNumber#1.~}%
+  \makeVerse{#1}
 }
 
 \newcommand{\prayerTitle}[1]{%
@@ -38,14 +46,11 @@
 }
 
 \newcommand{\psalmChapter}[1]{%
-  \hfill%
-  \phantom{0}\raisebox{0.35ex}[\ht\strutbox][\dp\strutbox]{\formatTextPsalmChapter\MakeLowercase{Psalmus #1}}\phantom{0}%
-  \hfill%
-  \setPageHeader{#1}%
+  \makeChapter{Psalmus #1}{#1}
 }
 
 \newcommand{\psalmVerse}[1]{%
-  {\formatTextVerseNumber\textsuperscript{#1. }}%
+  \makeVerse{#1}
 }
 
 \newcommand{\psalmInscription}[1]{%
@@ -151,12 +156,13 @@
 \chead{\formatTextHeader ORAZIO INIZIALIS}
 \input{beginning}
 
+\newpage
 
 \chead{\formatTextHeader PSALMI DAVIDI}
 
-\vspace*{1.0\baselineskip}
+\vspace*{0.5\baselineskip}
 
-{\formatTextNote\Large\bfseries
+{\formatTextNoteSection
 
   {\hfill incipit \hfill}
 
@@ -164,7 +170,7 @@
 
 }
 
-\vspace*{2.0\baselineskip}
+\vspace*{1.5\baselineskip}
 
 \input{tmp/psalmi}
 
@@ -178,6 +184,8 @@
 
   \vfill
 }
+
+\newpage
 
 %\chead{\scshape\formatTextHeader Ċàntica Bìblica}
 %\input{tmp/cantica}
