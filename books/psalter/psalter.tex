@@ -7,9 +7,6 @@
 
 \input{common/page-setup-printer}
 
-%\newcommand{\formatRepeatText}
-%{\itshape\footnotesize\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1.0em}
-
 \newcommand{\formatTextPsalmChapter}
 {\notefont\scshape\normalsize\addfontfeature{LetterSpace=15.0}\fontdimen2\font=0.75em}
 
@@ -30,16 +27,14 @@
 }
 
 \newcommand{\makeVerse}[1]{%
-  {\formatTextVerseNumber\textsuperscript{#1. }}%
+  {\formatTextVerseNumber\textsuperscript{#1.}~}%
 }
 
-\newcommand{\odeChapter}[1]{%
-  \makeChapter{Canticum #1}{#1}
+\newcommand{\odeChapter}[2]{%
+  \makeChapter{Canticum #1, #2}{#1}
 }
 
-\newcommand{\odeCount}[1]{%
-  \makeVerse{#1}
-}
+\newcommand{\odeVerse}[1]{{\formatTextVerseNumber\large#1:}\hspace{0.5em}}
 
 \newcommand{\prayerTitle}[1]{%
   {\hspace{2em}{\formatTextNote\MakeLowercase{#1}}}%
@@ -109,6 +104,7 @@
 }
 
 \newcommand{\skipI}{\vspace*{1.0\baselineskip}}
+\newcommand{\skipII}{\vspace*{2.0\baselineskip}}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -187,7 +183,7 @@
 
 \newpage
 
-%\chead{\scshape\formatTextHeader Ċàntica Bìblica}
-%\input{tmp/cantica}
+\chead{\formatTextHeader CANTICA BIBLICA}
+\input{tmp/cantica}
 
 \end{document}

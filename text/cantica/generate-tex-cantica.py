@@ -26,6 +26,30 @@ REF_VSPACE[7] = ""
 REF_VSPACE[8] = ""
 REF_VSPACE[9] = "\\vspace*{1\\baselineskip}\n"
 
+
+VSPACE_PRE = {}
+VSPACE_PRE[1] = r"\skipI"
+VSPACE_PRE[2] = r"\skipII"
+VSPACE_PRE[3] = r"\skipI"
+VSPACE_PRE[4] = r"\skipI"
+VSPACE_PRE[5] = r"\newpage"
+VSPACE_PRE[6] = r""
+VSPACE_PRE[7] = r"\skipI"
+VSPACE_PRE[8] = r"\skipI"
+VSPACE_PRE[9] = r"\skipI"
+
+VSPACE_POST = {}
+VSPACE_POST[1] = r"\skipI"
+VSPACE_POST[2] = r"\skipII"
+VSPACE_POST[3] = r"\skipII"
+VSPACE_POST[4] = r"\skipI"
+VSPACE_POST[5] = r"\skipII"
+VSPACE_POST[6] = r"\skipI"
+VSPACE_POST[7] = r"\newpage"
+VSPACE_POST[8] = r"\skipI"
+VSPACE_POST[9] = r"\skipI"
+
+
 KEY_PRINTER_LINEBREAK = "$PRX"
 KEY_PRINTER_NEWPAGE   = "$PRP"
 TEX_LINEBREAK = "\\linebreak"
@@ -43,7 +67,6 @@ while line:
 
   s = line.split('^')
   ode = s[0]
-  count = s[1]
   text = s[2].rstrip() # removes ending whitespace and '\n'
 
   is_count = s[1][0] != 'x'
@@ -56,25 +79,94 @@ while line:
   text = text.replace(KEY_PRINTER_LINEBREAK, TEX_LINEBREAK)
   text = text.replace(KEY_PRINTER_NEWPAGE, TEX_NEWPAGE)
 
-  if current_ode != ode:
-    print("\\odeChapter{" + ode + "}\n")
-    current_ode = ode
+  # Title
+  if s[1][0] == 't':
+    text = text.replace("Ċ", "C")
+    text = text.replace("Ġ", "G")
+    text = text.replace("W", "V")
+    text = text.replace("Á", "A")
+    text = text.replace("Ó", "O")
+    text = text.replace("É", "E")
+    text = text.replace("Ú", "U")
+    text = text.replace("Í", "I")
+    text = text.replace("Ý", "Y")
+    text = text.replace("À", "A")
+    text = text.replace("Ò", "O")
+    text = text.replace("È", "E")
+    text = text.replace("Ù", "U")
+    text = text.replace("Ì", "I")
+    text = text.replace("Ỳ", "Y")
+    text = text.replace("Â", "A")
+    text = text.replace("Ô", "O")
+    text = text.replace("Ê", "E")
+    text = text.replace("Û", "U")
+    text = text.replace("Î", "I")
+    text = text.replace("Ŷ", "Y")
 
-  if not is_count:
+    text = text.replace("ċ", "c")
+    text = text.replace("ġ", "g")
+    text = text.replace("w", "v")
+    text = text.replace("á", "a")
+    text = text.replace("ó", "o")
+    text = text.replace("é", "e")
+    text = text.replace("ú", "u")
+    text = text.replace("í", "i")
+    text = text.replace("ý", "y")
+    text = text.replace("à", "a")
+    text = text.replace("ò", "o")
+    text = text.replace("è", "e")
+    text = text.replace("ù", "u")
+    text = text.replace("ì", "i")
+    text = text.replace("ỳ", "y")
+    text = text.replace("â", "a")
+    text = text.replace("ô", "o")
+    text = text.replace("ê", "e")
+    text = text.replace("û", "u")
+    text = text.replace("î", "i")
+    text = text.replace("ŷ", "y")
+    
+    print("\\odeChapter{" + ode + "}{" + text + "}\n")
+  
+  # Exposition
+  elif s[1][0] == 'x':
     print(text + "\n")
-  else:
-    if count == "10":
-      print(REF_VSPACE[int(ode)])
-      print("\\indentOn\n")
-      count_arg = count
-    else:
-      count_arg = "\\phantom{0}" + count
 
-    print("\\odeCount{" + count_arg + "}" + text + "\n")
+  # Line Number
+  else:
+    count = s[1]
+    phantom = ""
+
+    if count == "10":
+      print(VSPACE_PRE[int(ode)])
+
+    elif count != "10":
+      phantom = "\\phantom{0}"
+
+    print("\\odeVerse{" + phantom + count + "}" + text + "\n")
 
     if count == "1":
-      print("\\indentOff\n")
-      print(ODE_VSPACE[int(ode)])
+      print("\n")
+      print(VSPACE_POST[int(ode)])
+
+  # if current_ode != ode:
+    # print("\\odeChapter{" + ode + "}\n")
+    # current_ode = ode
+
+  # if not is_count:
+    # print(text + "\n")
+  # else:
+    # if count == "10":
+      # print(REF_VSPACE[int(ode)])
+      # print("\\indentOn\n")
+      # count_arg = count
+    # else:
+      # count_arg = "\\phantom{0}" + count
+
+    # print("\\odeCount{" + count_arg + "}" + text + "\n")
+
+    # if count == "1":
+      # print("\\indentOff\n")
+      # print(ODE_VSPACE[int(ode)])
 
 
   line = f.readline()
