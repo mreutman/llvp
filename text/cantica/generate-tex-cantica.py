@@ -2,30 +2,39 @@
 
 import os
 import re
+import sys
 import pdb
 
 VSPACE_PRE = {}
-VSPACE_PRE[1] = r"\skipII"
-VSPACE_PRE[2] = r"\skipI"
-VSPACE_PRE[3] = r"\skipI"
-VSPACE_PRE[4] = r"\skipII"
-VSPACE_PRE[5] = r""
-VSPACE_PRE[6] = r""
+VSPACE_PRE[1] = r"\skipI"
+VSPACE_PRE[2] = r"\skipII"
+VSPACE_PRE[3] = r"\skipII"
+VSPACE_PRE[4] = r"\skipI"
+VSPACE_PRE[5] = r"\skipI"
+VSPACE_PRE[6] = r"\skipI"
 VSPACE_PRE[7] = r"\skipI"
 VSPACE_PRE[8] = r"\skipI"
-VSPACE_PRE[9] = r"\newpage"
+VSPACE_PRE[9] = r"\skipI"
 
 VSPACE_POST = {}
-VSPACE_POST[1] = r"\skipII"
-VSPACE_POST[2] = r"\skipII"
-VSPACE_POST[3] = r"\skipII"
-VSPACE_POST[4] = r"\newpage"
-VSPACE_POST[5] = r"\skipI"
-VSPACE_POST[6] = r"\skipI"
-VSPACE_POST[7] = r"\indentOn\skipI"
-VSPACE_POST[8] = r"\indentOff\skipII"
-VSPACE_POST[9] = r"\skipI"
+VSPACE_POST[1] = r"\psalmEndDecorate{2.5}"
+VSPACE_POST[2] = r"\psalmEndDecorateNewPage"
+VSPACE_POST[3] = r"\psalmEndDecorateNewPage"
+VSPACE_POST[4] = r"\psalmEndDecorate{3.0}"
+VSPACE_POST[5] = r"\psalmEndDecorate{1.0}"
+VSPACE_POST[6] = r"\psalmEndDecorateNewPage"
+VSPACE_POST[7] = r"\indentOn\psalmEndDecorateNewPage"
+VSPACE_POST[8] = r"\indentOff\psalmEndDecorate{1.0}"
+VSPACE_POST[9] = r""
 
+start = None
+end = None
+
+if len(sys.argv) == 2:
+  start = sys.argv[1]
+elif len(sys.argv) == 3:
+  start = sys.argv[1]
+  end = sys.argv[2]
 
 KEY_PRINTER_LINEBREAK = "$PRX"
 KEY_PRINTER_NEWPAGE   = "$PRP"
@@ -45,6 +54,10 @@ while line:
   s = line.split('^')
   ode = s[0]
   text = s[2].rstrip() # removes ending whitespace and '\n'
+  
+  if start and int(ode) < int(start):
+    line = f.readline()
+    continue
 
   is_count = s[1][0] != 'x'
 
@@ -117,18 +130,16 @@ while line:
     count = s[1]
     phantom = ""
 
-    if count == "10":
-      print(VSPACE_PRE[int(ode)])
+    if count == "8":
+      print(VSPACE_PRE[int(ode)] + "\n")
 
-    elif count != "10":
-      phantom = r"\phantom{0}"
-
-    print(r"\odeVerse{" + phantom + count + "}" + text + "\n")
+    print(r"\odeVerse{" + count + "}" + text + "\n")
 
     if count == "1":
-      print("\n")
+      if end and int(ode) > int(end):
+        break
 
-      print(VSPACE_POST[int(ode)])
+      print(VSPACE_POST[int(ode)] + "\n")
 
   # if current_ode != ode:
     # print("\\odeChapter{" + ode + "}\n")

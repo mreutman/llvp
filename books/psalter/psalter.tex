@@ -89,7 +89,7 @@
 \newcommand{\psalmEndDecorate}[1]{%
 
   \vspace*{#1\baselineskip}
-  {\hfill \raisebox{0.72ex}{·} \hspace*{3.0em} {\Huge ✠} \hspace*{3.0em} \raisebox{0.72ex}{·} \hfill}
+  {\hfill \raisebox{0.5ex}{·} \hspace*{3.0em} {\LARGE ✠} \hspace*{3.0em} \raisebox{0.5ex}{·} \hfill}
   \vspace*{#1\baselineskip}
 
 }
@@ -97,7 +97,7 @@
 \newcommand{\psalmEndDecorateNewPage}{%
 
   \vfill
-  {\hfill \raisebox{0.72ex}{·} \hspace*{2.0em} {\Huge ✠} \hspace*{2.0em} \raisebox{0.72ex}{·} \hfill}
+  {\hfill \raisebox{0.5ex}{·} \hspace*{2.0em} {\LARGE ✠} \hspace*{2.0em} \raisebox{0.5ex}{·} \hfill}
   \vfill
   \newpage
 
@@ -196,8 +196,16 @@
 
 }
 
-\vspace*{2.5\baselineskip}
+\vspace*{1.5\baselineskip}
 
-\input{tmp/cantica}
+\input{tmp/cantica-major}
+
+{\formatTextNoteSection
+
+  {\hfill incipit \hfill}
+
+  {\hfill cantica biblica majora\hfill}
+
+}
 
 \end{document}
