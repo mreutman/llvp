@@ -4,49 +4,26 @@ import os
 import re
 import pdb
 
-ODE_VSPACE = {}
-ODE_VSPACE[1] = "\\newpage"
-ODE_VSPACE[2] = "\\newpage"
-ODE_VSPACE[3] = "\\psalmEndDecorateNewPage"
-ODE_VSPACE[4] = "\\psalmEndDecorate{1.0}"
-ODE_VSPACE[5] = "\\newpage"
-ODE_VSPACE[6] = "\\psalmEndPictureNewPage"
-ODE_VSPACE[7] = "\\psalmEndDecorate{1.0}"
-ODE_VSPACE[8] = "\\psalmEndDecorateNewPage"
-ODE_VSPACE[9] = "\\psalmEndDecorateNewPage"
-
-REF_VSPACE = {}
-REF_VSPACE[1] = ""
-REF_VSPACE[2] = "\\vspace*{1\\baselineskip}\n"
-REF_VSPACE[3] = "\\vspace*{1\\baselineskip}\n"
-REF_VSPACE[4] = "\\vspace*{1\\baselineskip}\n"
-REF_VSPACE[5] = "\\vspace*{1\\baselineskip}\n"
-REF_VSPACE[6] = ""
-REF_VSPACE[7] = ""
-REF_VSPACE[8] = ""
-REF_VSPACE[9] = "\\vspace*{1\\baselineskip}\n"
-
-
 VSPACE_PRE = {}
-VSPACE_PRE[1] = r"\skipI"
-VSPACE_PRE[2] = r"\skipII"
+VSPACE_PRE[1] = r"\skipII"
+VSPACE_PRE[2] = r"\skipI"
 VSPACE_PRE[3] = r"\skipI"
-VSPACE_PRE[4] = r"\skipI"
-VSPACE_PRE[5] = r"\newpage"
+VSPACE_PRE[4] = r"\skipII"
+VSPACE_PRE[5] = r""
 VSPACE_PRE[6] = r""
 VSPACE_PRE[7] = r"\skipI"
 VSPACE_PRE[8] = r"\skipI"
-VSPACE_PRE[9] = r"\skipI"
+VSPACE_PRE[9] = r"\newpage"
 
 VSPACE_POST = {}
-VSPACE_POST[1] = r"\skipI"
+VSPACE_POST[1] = r"\skipII"
 VSPACE_POST[2] = r"\skipII"
 VSPACE_POST[3] = r"\skipII"
-VSPACE_POST[4] = r"\skipI"
-VSPACE_POST[5] = r"\skipII"
+VSPACE_POST[4] = r"\newpage"
+VSPACE_POST[5] = r"\skipI"
 VSPACE_POST[6] = r"\skipI"
-VSPACE_POST[7] = r"\newpage"
-VSPACE_POST[8] = r"\skipI"
+VSPACE_POST[7] = r"\indentOn\skipI"
+VSPACE_POST[8] = r"\indentOff\skipII"
 VSPACE_POST[9] = r"\skipI"
 
 
@@ -124,9 +101,13 @@ while line:
     text = text.replace("û", "u")
     text = text.replace("î", "i")
     text = text.replace("ŷ", "y")
-    
+
     print("\\odeChapter{" + ode + "}{" + text + "}\n")
-  
+
+    # HACK
+    if ode == "8":
+      print(r"\leftskip=3.75em")
+
   # Exposition
   elif s[1][0] == 'x':
     print(text + "\n")
@@ -140,12 +121,13 @@ while line:
       print(VSPACE_PRE[int(ode)])
 
     elif count != "10":
-      phantom = "\\phantom{0}"
+      phantom = r"\phantom{0}"
 
-    print("\\odeVerse{" + phantom + count + "}" + text + "\n")
+    print(r"\odeVerse{" + phantom + count + "}" + text + "\n")
 
     if count == "1":
       print("\n")
+
       print(VSPACE_POST[int(ode)])
 
   # if current_ode != ode:
