@@ -23,9 +23,17 @@ VSPACE_POST[3] = r"\psalmEndDecorateNewPage"
 VSPACE_POST[4] = r"\psalmEndDecorate{3.0}"
 VSPACE_POST[5] = r"\psalmEndDecorate{1.0}"
 VSPACE_POST[6] = r"\psalmEndDecorateNewPage"
-VSPACE_POST[7] = r"\indentOn\psalmEndDecorateNewPage"
-VSPACE_POST[8] = r"\indentOff\psalmEndDecorate{1.0}"
+VSPACE_POST[7] = r"\indentOn\leftskip=3.75em\psalmEndDecorateNewPage"
+VSPACE_POST[8] = r"\indentOff\leftskip=0em\psalmEndDecorate{0.69}"
 VSPACE_POST[9] = r""
+VSPACE_POST[10] = r"\skipII"
+VSPACE_POST[11] = r"\newpage"
+VSPACE_POST[12] = r"\skipI"
+VSPACE_POST[13] = r"\skipI"
+VSPACE_POST[14] = r"\skipI"
+VSPACE_POST[15] = r"\skipI"
+VSPACE_POST[16] = r"\skipI"
+VSPACE_POST[17] = r"\skipI"
 
 start = None
 end = None
@@ -44,7 +52,7 @@ TEX_NEWPAGE   = "\\newpage"
 path = os.path.dirname(os.path.realpath(__file__))
 f = open(path + "/cantica-vetus.csv", "r")
 
-current_ode = 0
+prev_ode = None
 line = f.readline()
 while line:
   if '#' == line[0]:
@@ -58,6 +66,12 @@ while line:
   if start and int(ode) < int(start):
     line = f.readline()
     continue
+
+  if end and int(ode) > int(end):
+    break
+
+  if prev_ode and int(prev_ode) != int(ode):
+    print(VSPACE_POST[int(prev_ode)] + "\n")
 
   is_count = s[1][0] != 'x'
 
@@ -118,8 +132,8 @@ while line:
     print("\\odeChapter{" + ode + "}{" + text + "}\n")
 
     # HACK
-    if ode == "8":
-      print(r"\leftskip=3.75em")
+    #if ode == "8":
+    #  print(r"\leftskip=3.75em")
 
   # Exposition
   elif s[1][0] == 'x':
@@ -135,11 +149,8 @@ while line:
 
     print(r"\odeVerse{" + count + "}" + text + "\n")
 
-    if count == "1":
-      if end and int(ode) > int(end):
-        break
-
-      print(VSPACE_POST[int(ode)] + "\n")
+    #if ode == "8" and count == "1":
+      #print(r"\leftskip=0em")
 
   # if current_ode != ode:
     # print("\\odeChapter{" + ode + "}\n")
@@ -161,7 +172,7 @@ while line:
       # print("\\indentOff\n")
       # print(ODE_VSPACE[int(ode)])
 
-
+  prev_ode = ode
   line = f.readline()
 
 f.close()

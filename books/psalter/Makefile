@@ -28,6 +28,7 @@ latex:
 
 	./text/psalmi/generate-tex-psalmi.py > $(DIR_TMP)/psalmi.tex
 	./text/cantica/generate-tex-cantica.py 1 9 > $(DIR_TMP)/cantica-major.tex
+	./text/cantica/generate-tex-cantica.py 10  > $(DIR_TMP)/cantica-minor.tex
 
 pdf:
 	xelatex -halt-on-error -shell-escape ./psalter.tex
