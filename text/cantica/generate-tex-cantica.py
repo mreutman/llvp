@@ -62,7 +62,12 @@ while line:
   s = line.split('^')
   ode = s[0]
   text = s[2].rstrip() # removes ending whitespace and '\n'
-  
+
+  if ode == 'n':
+    ode = str(int(prev_ode) + 1)
+  elif ode == 'c':
+    ode = prev_ode
+
   if start and int(ode) < int(start):
     line = f.readline()
     continue
