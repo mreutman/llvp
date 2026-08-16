@@ -34,9 +34,25 @@ VSPACE_POST[14] = r"\skipI"
 VSPACE_POST[15] = r"\skipI"
 VSPACE_POST[16] = r"\skipI"
 VSPACE_POST[17] = r"\skipI"
+VSPACE_POST[18] = r"\skipI"
+VSPACE_POST[19] = r"\skipI"
+VSPACE_POST[20] = r"\skipI"
+VSPACE_POST[21] = r"\skipI"
+VSPACE_POST[22] = r"\skipI"
+VSPACE_POST[23] = r"\skipI"
+VSPACE_POST[24] = r"\skipI"
+VSPACE_POST[25] = r"\skipI"
+VSPACE_POST[26] = r"\skipI"
+VSPACE_POST[27] = r"\skipI"
+VSPACE_POST[28] = r"\skipI"
+VSPACE_POST[29] = r"\skipI"
+VSPACE_POST[30] = r"\skipI"
+VSPACE_POST[31] = r"\skipI"
+VSPACE_POST[32] = r"\skipI"
 
 start = None
 end = None
+prev = None
 
 if len(sys.argv) == 2:
   start = sys.argv[1]
@@ -52,7 +68,6 @@ TEX_NEWPAGE   = "\\newpage"
 path = os.path.dirname(os.path.realpath(__file__))
 f = open(path + "/cantica-vetus.csv", "r")
 
-prev_ode = None
 line = f.readline()
 while line:
   if '#' == line[0]:
@@ -64,19 +79,20 @@ while line:
   text = s[2].rstrip() # removes ending whitespace and '\n'
 
   if ode == 'n':
-    ode = str(int(prev_ode) + 1)
+    ode = str(int(prev) + 1)
   elif ode == 'c':
-    ode = prev_ode
+    ode = prev
 
   if start and int(ode) < int(start):
     line = f.readline()
+    prev = ode
     continue
 
   if end and int(ode) > int(end):
     break
 
-  if prev_ode and int(prev_ode) != int(ode):
-    print(VSPACE_POST[int(prev_ode)] + "\n")
+  if prev and int(prev) != int(ode):
+    print(VSPACE_POST[int(prev)] + "\n")
 
   is_count = s[1][0] != 'x'
 
@@ -177,7 +193,7 @@ while line:
       # print("\\indentOff\n")
       # print(ODE_VSPACE[int(ode)])
 
-  prev_ode = ode
+  prev = ode
   line = f.readline()
 
 f.close()
