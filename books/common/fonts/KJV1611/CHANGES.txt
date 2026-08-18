@@ -12,3 +12,4 @@ CHANGE LIST
 -'ů' move ring down by 20 points; about same vertical seperation as 'Ů'.
 -'w' move down to same y-height as 'u'; reduce height of left half of glyph; extend outside left stem.
 -Add Maltese Cross (U+2720) from Junicode2
+-Lower stem of 'Q'
