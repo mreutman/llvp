@@ -432,7 +432,7 @@ Psalm 131:11
 Qvóniam non derelìnqves ànimam meam in infèrno, nec dabis sânctum tuum vidére corrupziónem.
 Psalm 15:10
 
-Et aeit Dòminus Deus ad serpèntem: «~Inimiçìzias pònam inter te et mulíerem, et semen tuum et semen ìllius.~»
+Et aeit Dòminus Deus ad serpèntem: «~Inimiçìzzias pònam inter te et mulíerem, et semen tuum et semen ìllius.~»
 Genesis 3:15
 
 «~Ipsa cònteret càput tuum, et tu insidiáberis calcáneo ejus.~»
