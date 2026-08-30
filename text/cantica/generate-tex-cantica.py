@@ -49,6 +49,19 @@ VSPACE_POST[29] = r"\skipI"
 VSPACE_POST[30] = r"\skipI"
 VSPACE_POST[31] = r"\skipI"
 VSPACE_POST[32] = r"\skipI"
+VSPACE_POST[33] = r"\skipI"
+VSPACE_POST[34] = r"\skipI"
+VSPACE_POST[35] = r"\skipI"
+VSPACE_POST[36] = r"\skipI"
+VSPACE_POST[37] = r"\skipI"
+VSPACE_POST[38] = r"\skipI"
+VSPACE_POST[39] = r"\skipI"
+VSPACE_POST[40] = r"\skipI"
+VSPACE_POST[41] = r"\skipI"
+VSPACE_POST[42] = r"\skipI"
+VSPACE_POST[43] = r"\skipI"
+VSPACE_POST[44] = r"\skipI"
+VSPACE_POST[45] = r"\skipI"
 
 start = None
 end = None
@@ -158,6 +171,9 @@ while line:
 
   # Exposition
   elif s[1][0] == 'x':
+    first_char = text[0]
+    rest_of_text = text[1:]
+    text = f"\\firstLetter{{{first_char}}}{rest_of_text}"
     print(text + "\n")
 
   # Line Number

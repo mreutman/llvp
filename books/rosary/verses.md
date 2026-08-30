@@ -315,7 +315,7 @@ John 19:30
 Et clamans voçe magna Jesus aeit: «~Pater, in mànůs tuas commèndo spíritum meum.~» Et haec diçens exspirávit.
 Luke 23:46
 
-Èrat autem fere hora sexta, et tènebrae factae sunt in univèrsa terra ûsqve in nonam horam, et obscurátus est sôl et velum templi sçissum est mèdium.
+Èrat autem fere hora sexta, et tènebrae factae sunt in univèrsa terra usqve in nonam horam, et obscurátus est sôl et velum templi sçissum est mèdium.
 Luke 23:44,45
 
 Acçepérunt ergo corpus Jesu, et ligavérunt illud lìnteis cum aromátibus, sicut môs est Judáeis sepelíre.
@@ -363,7 +363,7 @@ Matthew 28:18
 «~Eùntes ergo doçéte omnes ģentes, baptisàntes eos in nómine Patris, et Fílii, et Spíritůs Sâncti.~»
 Matthew 28:19
 
-«~Ecçe ego vobîscum sum òmnibus diébus, ûsqve ad consummaziónem sáeculi.~»
+«~Ecçe ego vobîscum sum òmnibus diébus, usqve ad consummaziónem sáeculi.~»
 Matthew 28:20
 
 «~Qvi credìderit et baptisátus fúerit, salvus èrit; qvi vero non credìderit, condemnábitur.~»
@@ -394,7 +394,7 @@ John 14:26
 «~Vos baptisabìmini Spíritu Sâncto non post multos hos dies.~»
 Acts 1:5
 
-«~Acçipiétis virtútem supervenièntis Spíritůs Sâncti in vos, et èritis mìhi testes in Jerusaléma, et in omni Judáea, et Samaría, et ûsqve ad ùltimum terrae.~»
+«~Acçipiétis virtútem supervenièntis Spíritůs Sâncti in vos, et èritis mìhi testes in Jerusaléma, et in omni Judáea, et Samaría, et usqve ad ùltimum terrae.~»
 Acts 1:8
 
 Et qvum conplerèntur dies pentecòstes èrant omnes páriter in eódem loco; et factus est repènte de çoelo sònus tamqvam advenièntis spíritus vehemèntis, et replévit totam dòmum ubi èrant sedèntes.
