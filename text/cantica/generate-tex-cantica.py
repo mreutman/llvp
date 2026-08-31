@@ -27,41 +27,34 @@ VSPACE_POST[7] = r"\indentOn\leftskip=3.75em\psalmEndDecorateNewPage"
 VSPACE_POST[8] = r"\indentOff\leftskip=0em\psalmEndDecorate{0.69}"
 VSPACE_POST[9] = r""
 VSPACE_POST[10] = r"\skipII"
-VSPACE_POST[11] = r"\newpage"
-VSPACE_POST[12] = r"\skipI"
-VSPACE_POST[13] = r"\skipI"
-VSPACE_POST[14] = r"\skipI"
-VSPACE_POST[15] = r"\skipI"
-VSPACE_POST[16] = r"\skipI"
-VSPACE_POST[17] = r"\skipI"
-VSPACE_POST[18] = r"\skipI"
-VSPACE_POST[19] = r"\skipI"
+VSPACE_POST[11] = r"\skipIII"
+VSPACE_POST[12] = r"\newpage"
+VSPACE_POST[13] = r"\skipII"
+VSPACE_POST[14] = r"\skipIII"
+VSPACE_POST[15] = r"\skipII"
+VSPACE_POST[16] = r"\skipIII"
+VSPACE_POST[17] = r"\skipIII"
+VSPACE_POST[18] = r"\skipIII"
+VSPACE_POST[19] = r"\newpage"
 VSPACE_POST[20] = r"\skipI"
-VSPACE_POST[21] = r"\skipI"
-VSPACE_POST[22] = r"\skipI"
-VSPACE_POST[23] = r"\skipI"
-VSPACE_POST[24] = r"\skipI"
+VSPACE_POST[21] = r"\newpage"
+VSPACE_POST[22] = r"\skipII"
+VSPACE_POST[23] = r"\skipII"
+VSPACE_POST[24] = r"\skipII"
 VSPACE_POST[25] = r"\skipI"
-VSPACE_POST[26] = r"\skipI"
-VSPACE_POST[27] = r"\skipI"
-VSPACE_POST[28] = r"\skipI"
-VSPACE_POST[29] = r"\skipI"
-VSPACE_POST[30] = r"\skipI"
-VSPACE_POST[31] = r"\skipI"
-VSPACE_POST[32] = r"\skipI"
-VSPACE_POST[33] = r"\skipI"
-VSPACE_POST[34] = r"\skipI"
-VSPACE_POST[35] = r"\skipI"
-VSPACE_POST[36] = r"\skipI"
-VSPACE_POST[37] = r"\skipI"
-VSPACE_POST[38] = r"\skipI"
-VSPACE_POST[39] = r"\skipI"
-VSPACE_POST[40] = r"\skipI"
-VSPACE_POST[41] = r"\skipI"
-VSPACE_POST[42] = r"\skipI"
-VSPACE_POST[43] = r"\skipI"
-VSPACE_POST[44] = r"\skipI"
-VSPACE_POST[45] = r"\skipI"
+VSPACE_POST[26] = r"\skipII"
+VSPACE_POST[27] = r"\newpage"
+VSPACE_POST[28] = r"\psalmEndDecorateNewPage"
+VSPACE_POST[29] = r"\skipIII"
+VSPACE_POST[30] = r"\skipII"
+VSPACE_POST[31] = r"\newpage"
+VSPACE_POST[32] = r"\skipIII"
+VSPACE_POST[33] = r"\skipII"
+VSPACE_POST[34] = r"\newpage"
+VSPACE_POST[35] = r"\skipIII"
+VSPACE_POST[36] = r"\skipII"
+VSPACE_POST[37] = r"\newpage"
+VSPACE_POST[38] = r""
 
 start = None
 end = None
@@ -171,9 +164,9 @@ while line:
 
   # Exposition
   elif s[1][0] == 'x':
-    first_char = text[0]
-    rest_of_text = text[1:]
-    text = f"\\firstLetter{{{first_char}}}{rest_of_text}"
+    #first_char = text[0]
+    #rest_of_text = text[1:]
+    #text = f"\\firstLetter{{{first_char}}}{rest_of_text}"
     print(text + "\n")
 
   # Line Number
@@ -185,29 +178,6 @@ while line:
       print(VSPACE_PRE[int(ode)] + "\n")
 
     print(r"\odeVerse{" + count + "}" + text + "\n")
-
-    #if ode == "8" and count == "1":
-      #print(r"\leftskip=0em")
-
-  # if current_ode != ode:
-    # print("\\odeChapter{" + ode + "}\n")
-    # current_ode = ode
-
-  # if not is_count:
-    # print(text + "\n")
-  # else:
-    # if count == "10":
-      # print(REF_VSPACE[int(ode)])
-      # print("\\indentOn\n")
-      # count_arg = count
-    # else:
-      # count_arg = "\\phantom{0}" + count
-
-    # print("\\odeCount{" + count_arg + "}" + text + "\n")
-
-    # if count == "1":
-      # print("\\indentOff\n")
-      # print(ODE_VSPACE[int(ode)])
 
   prev = ode
   line = f.readline()

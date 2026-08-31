@@ -54,16 +54,16 @@
 
 \newcommand{\psalmSkip}[1]{\vspace*{#1\baselineskip}}
 
-\newcommand{\psalmEnd}{%
+\newcommand{\psalmEndI}{%
   {\notefont\normalsize\phantom{..}\raisebox{0.5ex}{+}}
 
   \vspace*{1\baselineskip}
 }
 
-\newcommand{\psalmEndExtra}[1]{%
+\newcommand{\psalmEndII}{%
   {\notefont\normalsize\phantom{..}\raisebox{0.5ex}{+}}
 
-  \vspace*{#1\baselineskip}
+  \vspace*{2\baselineskip}
 }
 
 \newcommand{\psalmEndNewPage}{%
@@ -106,6 +106,7 @@
 \newcommand{\skipI}{\vspace*{1.0\baselineskip}}
 \newcommand{\skipII}{\vspace*{2.0\baselineskip}}
 \newcommand{\skipIII}{\vspace*{3.0\baselineskip}}
+\newcommand{\skipIV}{\vspace*{4.0\baselineskip}}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -200,7 +201,7 @@
 
 \input{tmp/cantica-major}
 
-\vspace*{2.0\baselineskip}
+\vspace*{3.0\baselineskip}
 
 {\formatTextNoteSection
 
@@ -210,8 +211,18 @@
 
 }
 
-\vspace*{2.0\baselineskip}
+\vspace*{3.0\baselineskip}
 
 \input{tmp/cantica-minor}
+
+\vspace*{2.5\baselineskip}
+
+{\formatTextNoteSection
+
+  {\hfill varii hymni\hfill}
+
+}
+
+\vspace*{2.5\baselineskip}
 
 \end{document}
