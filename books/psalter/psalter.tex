@@ -14,7 +14,7 @@
 {\notefont\scshape\footnotesize\addfontfeature{LetterSpace=2.0}\fontdimen2\font=0.3em}
 
 \newcommand{\formatTextVerseNumber}
-{\notefont\scshape\small}
+{\notefont\scshape\footnotesize}
 
 \newcommand{\formatOdeCountNumber}
 {\small}
@@ -26,9 +26,7 @@
   \setPageHeader{#2}%
 }
 
-\newcommand{\makeVerse}[1]{%
-  {\formatTextVerseNumber\textsuperscript{#1.}~}%
-}
+\newcommand{\makeVerse}[1]{\textsuperscript{\formatTextVerseNumber #1}\nobreak}
 
 \newcommand{\odeChapter}[2]{%
   \makeChapter{Canticum #1, #2}{#1}
