@@ -13,3 +13,5 @@ CHANGE LIST
 -'w' move down to same y-height as 'u'; reduce height of left half of glyph; extend outside left stem.
 -Add Maltese Cross (U+2720) from Junicode2
 -Lower stem of 'Q'
+-Increase bottom right rounding of 'O'
+-Move bottom right point of angle up of 'D'
