@@ -1,4 +1,12 @@
-# Lingua Latina Vulgaris Pennsylvaniensis
+# Lingua Latina Vulgaris Pennsylvanica
 
 Pennsylvania Vulgar Latin: a dialect of Latin spoken with American English
-and German influences, with an accompanying diacritical system.
+and Germanic influences, with an accompanying diacritical system.
+
+## Dependencies
+
+Assuming a Debian system, the following packages should be installed
+
+```
+apt install build-essential texlive-xetex
+```
