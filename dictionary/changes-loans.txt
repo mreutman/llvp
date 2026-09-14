@@ -1,2 +1,2 @@
-borda, bordae ^ Nf ^ border ; edge ^ Borrow from Germanic / Frankish to disambiguate "os, oris" and "oro, orare, 
-struna, strunae ^ Nf ^ musical string ^ Borrow from Romanian to disambiguate "cor, cordis".
+borda, bordae ^ Nf ^ border ; edge ^ Borrow from Germanic / Frankish "*bord" to disambiguate "os, oris" and "oro, orare,
+saeda, saedae ^ Nf ^ musical string ^ Borrow from German "Saite", Proto-Germanic "*saidô" to disambiguate "cor, cordis".
