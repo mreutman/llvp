@@ -15,8 +15,9 @@
     ragged-last = ##t
     \context {
       \Score
-      \override TextScript.font-shape = #'caps
-      \override LyricText.font-shape = #'caps
+
+      %forbidBreakBetweenBarLines = ##f
+
       \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/16)
       \accidentalStyle forget
     }
