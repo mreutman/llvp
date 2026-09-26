@@ -12,7 +12,10 @@
   >>
   \layout { 
     indent = 0\mm
-    ragged-last = ##t
+    %ragged-last = ##t % ragged
+    %ragged-last = ##f % justify
+    ragged-last = \raggedLastSetting
+
     \context {
       \Score
 

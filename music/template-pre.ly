@@ -2,7 +2,7 @@
 #(ly:font-config-add-font "/home/anon/Git/llvp/books/common/fonts/EBGaramond/static/EBGaramond-Regular.ttf")
 #(ly:font-config-add-font "/home/anon/Git/llvp/books/common/fonts/EBGaramond/static/EBGaramond-Italic.ttf")
 
-#(ly:font-config-display-fonts)
+%#(ly:font-config-display-fonts)
 
 \paper {
   % New property assignment syntax for 2.24+
@@ -36,3 +36,6 @@ melodyDefaults = {
   \override Staff.Rest.style = #'neomensural
   %\override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
 }
+
+% Default to ##t across all scores
+raggedLastSetting = ##t
