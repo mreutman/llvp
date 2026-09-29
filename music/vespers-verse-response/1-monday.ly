@@ -5,9 +5,9 @@ melody = \relative c' {
   \clef "petrucci-c5"
   \melodyDefaults
 
-  g\breve \hideNotes g4 g g g \unHideNotes g4. e4 e4. e4 f g2 \bar "|"  \break
+  g4 g g4. g4 g g4. e4 e4. e4 f g2 \bar "|"  \break
 
-  a\breve \hideNotes a4 \unHideNotes a4. a b b g2 \fine
+  a4 a a4. a b b g2 \fine
 }
 
 text = \lyricmode {

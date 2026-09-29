@@ -5,7 +5,7 @@ melody = \relative c' {
   \clef "petrucci-c4"
   \melodyDefaults
 
-  c4 c4. c4 a a a a a c c c c \bar "|"  \break
+  c4 c4. c4 a a a a a c c c c2 \bar "|"  \break
 
   a4 a a g4. g4 g a f4. f4 f f2 \fine
 }

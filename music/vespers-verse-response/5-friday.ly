@@ -7,7 +7,7 @@ melody = \relative c' {
 
   d,4 f4 f f f e4. d4 f f f2 \bar "|"
 
-  a4 a4 a g g a4 f2 f \fine
+  a4 a4 a g g a4 f2 f2 \fine
 
 }
 

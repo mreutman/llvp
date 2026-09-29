@@ -29,8 +29,8 @@
   layout=letterpaper,
   right=1.0in,
   left=1.0in,
-  lines=50,
-  top=0.8in,
+  lines=48,
+  top=0.7in,
   %headheight=14.5pt,
   %includehead,
   heightrounded,
@@ -131,7 +131,7 @@
 {{\hfill{\formatTextChapter #1}\hfill}\vspace*{1\baselineskip}}
 
 \newcommand{\documentNote}[2]
-{{\formatTextNote\hspace*{#2}#1}}
+{{\formatTextNote\hspace*{#2}\MakeLowercase{#1}}}
 
 \newcommand{\documentNoteRepeat}[2]
 {\documentNote{repetatur {\formatTextNoteRepeat #1} :}{#2}}
@@ -148,3 +148,17 @@
 \newcommand{\indentOff}{%
   \end{flushleft}\hangindent=0em\hangafter=0
 }
+
+\newcommand{\manualIndent}{%
+  \hspace{2em}
+}
+
+\newcommand{\skipH}{\vspace*{0.5\baselineskip}}
+\newcommand{\skipI}{\vspace*{1.0\baselineskip}}
+\newcommand{\skipIH}{\vspace*{1.5\baselineskip}}
+\newcommand{\skipII}{\vspace*{2.0\baselineskip}}
+\newcommand{\skipIIH}{\vspace*{2.5\baselineskip}}
+\newcommand{\skipIII}{\vspace*{3.0\baselineskip}}
+\newcommand{\skipIIIH}{\vspace*{3.5\baselineskip}}
+\newcommand{\skipIV}{\vspace*{4.0\baselineskip}}
+\newcommand{\skipIVH}{\vspace*{4.5\baselineskip}}

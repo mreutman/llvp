@@ -97,7 +97,7 @@ while line:
   if end and int(ode) > int(end):
     break
 
-  if prev and int(prev) != int(ode):
+  if prev and int(prev) != int(ode) and int(start) != int(end):
     print(VSPACE_POST[int(prev)] + "\n")
 
   is_count = s[1][0] != 'x'

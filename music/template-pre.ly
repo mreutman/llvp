@@ -17,7 +17,7 @@
 
   score-system-spacing.padding = #5
   system-system-spacing = #'((basic-distance . 13))
-  ragged-bottom = ##t
+  %ragged-bottom = ##t
 }
 
 melodyDefaults = {
@@ -34,7 +34,7 @@ melodyDefaults = {
   \override Lyrics.LyricSpace.minimum-distance = #3.0
   \override NoteHead.style = #'petrucci
   \override Staff.Rest.style = #'neomensural
-  %\override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
+  %\override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/4)
 }
 
 % Default to ##t across all scores

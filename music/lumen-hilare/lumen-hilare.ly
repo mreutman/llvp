@@ -1,8 +1,8 @@
-\version "2.24.0"
+\version "2.26.0"
 \include "../template-pre.ly"
 
 melody = \relative c' {
-  \clef "blackmensural-c4"
+  \clef "petrucci-c4"
   \melodyDefaults
 
   % 1
@@ -47,20 +47,19 @@ melody = \relative c' {
 
 text = \lyricmode {
   % 1
-  \markup { \concat { \fontsize #4 "L" \tied-lyric #"" "u" } }
-  -- men __ _ hì -- la _ -- re, sânc _ -- tae gló -- ri -- ae
+  Lu -- men __ _ hì -- la _ -- re, sânc _ -- tae gló -- ri -- ae
   % 2
-  Pa _ _ -- tris im -- mor -- tá -- lis, çoe -- lès _ -- tis
+  Pa _ _ -- tris im -- mor -- tá -- lis, ċoe -- lès _ -- tis,
   % 3
   sânc _ _ -- ti, be -- á _ -- ti,
   % 4
-  Įe _ _ _ -- su Chrîs _ -- te. __ _ _ _ _ _ _ _
+  Je _ _ _ -- su Chrîs _ -- te. __ _ _ _ _ _ _ _
   % 5
-  Ac -- çe -- dèn -- tes ad oc -- cá -- sum so _ -- lis,
+  Ac -- ċe -- dèn -- tes ad oc -- cá -- sum so _ -- lis,
   % 6
-  et lu _ -- çe ves -- per -- tí -- na ac -- çèn _ -- sa. __ _ _ _
+  et lu _ -- ċe ves -- per -- tí -- na ac -- ċèn _ -- sa. __ _ _ _
   % 7
-  Çan -- tá _ -- mus Pa _ -- trem, __ _ _ et Fí _ -- li -- um, 
+  Ċan -- tá _ -- mus Pa _ -- trem, __ _ _ et Fí _ -- li -- um, 
   % 8
   et Spí _ -- ri _ -- tum Sânc _  -- tum,
   % 9
@@ -68,7 +67,7 @@ text = \lyricmode {
   % 10
   Dig -- nus es _ in om -- ni tèm _ -- po -- re 
   % 11
-  çan _ -- tá _ -- ri __ _ vó -- çi -- bus __ _ pu -- rīs, __ _ _ _ _
+  ċan _ -- tá _ -- ri __ _ vó -- ċi -- bus __ _ pu -- ris, __ _ _ _ _
   % 12
   Fí _ -- li __ _ _ De _ -- i,
   % 13
@@ -78,14 +77,14 @@ text = \lyricmode {
   % 15
   ex to -- to or -- be
   % 16
-  a -- sçèn -- dit ad te gló -- ri -- a lau _ -- dis.
+  a -- sċèn -- dit ad te gló -- ri -- a lau _ -- dis.
   % 17
   A _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ -- men.
 }
 
 \header {
-  title = "LUMEN HÌLARE"
-  opus = \markup { \sans \smallCaps "melódia oriģináli" }
+  title = "Lumen Hilare"
+  opus = \markup { \sans "Melodia Oriġinali" }
   tagline = #f
 }
 
