@@ -16,3 +16,4 @@ CHANGE LIST
 -Increase bottom right rounding of 'O'
 -Move bottom right point of angle up of 'D'
 -Merge points to round top left and right of 'O' and 'Q'
+-Reduce acute, grave, circumflex, diaresis to 80%, tilde to 72%
