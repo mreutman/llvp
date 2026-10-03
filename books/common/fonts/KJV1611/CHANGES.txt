@@ -16,4 +16,8 @@ CHANGE LIST
 -Increase bottom right rounding of 'O'
 -Move bottom right point of angle up of 'D'
 -Merge points to round top left and right of 'O' and 'Q'
--Reduce acute, grave, circumflex, diaresis to 80%, tilde to 72%
+-Reduce acute, grave, circumflex, diaresis to 80%
+-Reduce tilde to 72%, rotate -4 degrees, move far right point in by 7
+-Replace dot in Ċ,ċ,Ġ,ġ with tilde
+-Replace bottom hook of 'r' with diamond pattern.
+-Add kern subtable for 'r' and 'o' + diacritics 
