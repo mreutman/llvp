@@ -19,5 +19,7 @@ CHANGE LIST
 -Reduce acute, grave, circumflex, diaresis to 80%
 -Reduce tilde to 72%, rotate -4 degrees, move far right point in by 7
 -Replace dot in Ċ,ċ,Ġ,ġ with tilde
--Replace bottom hook of 'r' with diamond pattern.
+-Replace bottom hook of 'r' with diamond pattern
 -Add kern subtable for 'r' and 'o' + diacritics 
+-Reduce bottom right tail of 'h'
+-Remove nubs from primary stems of 'h' and 'l'
