@@ -26,3 +26,4 @@ CHANGE LIST
 -Rotate acute and grave accents of 'a', 'e', 'i', 'o', and 'u' (including uppercase) upwards by 8 degrees
 -Increase X-height for 'b' and 'l' to match 'h'
 -Decrease X-height for 'v'
+-Simplify top left and top right of 'h'
