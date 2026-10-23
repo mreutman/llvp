@@ -15,7 +15,7 @@ melody = \relative c' {
 text = \lyricmode {
   Dò -- mi -- nus ex -- áu -- di -- et me
   
-  qv -- um cla -- má -- ve -- ro ad e -- um.
+  qu -- um cla -- má -- ve -- ro ad e -- um.
 }
 
 \header {

@@ -15,7 +15,7 @@ text = \lyricmode {
 
   Au -- xì -- li -- um me -- um a Dò -- mi -- no,
   
-  qvi fe -- ċit ċoe -- lum et ter -- ram.
+  qui fe -- ċit ċoe -- lum et ter -- ram.
 
 }
 
