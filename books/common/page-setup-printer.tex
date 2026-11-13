@@ -1,4 +1,4 @@
-\usepackage[none]{hyphenat}
+%\usepackage[none]{hyphenat} % Disables all hyphenation
 \usepackage{everysel}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
@@ -38,7 +38,7 @@
 
 \fi
 
-\newcommand{\setPageHeader}[1]{%
+\newcommand{\setPageHeaderChapter}[1]{%
   \ifnum\pageHeaderEnable>0
     \ifnum\value{page}>\pageHeaderStart%
       \markboth{\formatTextHeader cap. {\footnotesize #1}}%

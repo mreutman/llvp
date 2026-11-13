@@ -5,6 +5,9 @@
 \newcommand{\pageHeaderEnable}{1}
 \newcommand{\pageHeaderStart}{3}
 
+% prevent specific words from hyphenating
+%\hyphenation{unbreakableword database typescript}
+
 \input{common/page-setup-printer}
 
 \newcommand{\formatTextPsalmChapter}
@@ -23,7 +26,7 @@
   \hfill%
   \phantom{0}\raisebox{0.35ex}[\ht\strutbox][\dp\strutbox]{\formatTextPsalmChapter\MakeLowercase{#1}}\phantom{0}%
   \hfill%
-  \setPageHeader{#2}%
+  \setPageHeaderChapter{#2}%
 }
 
 \newcommand{\makeVerse}[1]{\textsuperscript{\formatTextVerseNumber #1}\nobreak}
@@ -103,6 +106,10 @@
 
 }
 
+\newcommand{\setPageHeaderTitle}[1]{%
+  \chead{\formatTextHeader\MakeLowercase{#1}}
+}
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -123,7 +130,7 @@
 \vspace*{\fill}
 
 \begin{center}
-{\fontsize{30}{60}\selectfont\fontdimen2\font=0.5em Psalterium}
+{Psalterium}
 
 \skipII
 
@@ -132,7 +139,7 @@
 
 \skipII
 
-{\fontsize{30}{60}\selectfont Pennsylvanicum}
+{Pennsylvanicum}
 
 \skipII
 
@@ -152,25 +159,25 @@
 
 \pagestyle{fancy}
 
-\chead{\formatTextHeader DISTRIBUZIO PSALMORUM}
+\setPageHeaderTitle{Distribuzio Psalmorum}
 \input{tables}
 
 \large
 
-\chead{\formatTextHeader ORAZIO INIZZIALIS}
+\setPageHeaderTitle{Orazio Inizialis}
 \input{beginning}
 
 \newpage
 
-\chead{\formatTextHeader PSALMI DAVIDI}
+\setPageHeaderTitle{Psalmi Davidi}
 
 \skipH
 
 {\formatTextNoteSection
 
-  {\hfill incipit \hfill}
+  {\hfill Ìnċipit \hfill}
 
-  {\hfill liber psalmorum \hfill}
+  {\hfill lìber psalmórum \hfill}
 
 }
 
@@ -182,9 +189,9 @@
 
   \vfill
 
-  {\hfill explicit \hfill}
+  {\hfill Èxpliċit \hfill}
 
-  {\hfill liber psalmorum \hfill}
+  {\hfill lìber psalmórum \hfill}
 
   \vfill
 }
