@@ -9,106 +9,7 @@
 %\hyphenation{unbreakableword database typescript}
 
 \input{common/page-setup-printer}
-
-\newcommand{\formatTextPsalmChapter}
-{\notefont\scshape\normalsize\addfontfeature{LetterSpace=15.0}\fontdimen2\font=0.75em}
-
-\newcommand{\formatTextInscription}
-{\notefont\scshape\footnotesize\addfontfeature{LetterSpace=2.0}\fontdimen2\font=0.3em}
-
-\newcommand{\formatTextVerseNumber}
-{\notefont\scshape\footnotesize}
-
-\newcommand{\formatOdeCountNumber}
-{\small}
-
-\newcommand{\makeChapter}[2]{%
-  \hfill%
-  \phantom{0}\raisebox{0.35ex}[\ht\strutbox][\dp\strutbox]{\formatTextPsalmChapter\MakeLowercase{#1}}\phantom{0}%
-  \hfill%
-  \setPageHeaderChapter{#2}%
-}
-
-\newcommand{\makeVerse}[1]{\textsuperscript{\formatTextVerseNumber #1}\nobreak}
-
-\newcommand{\odeChapter}[2]{%
-  \makeChapter{Canticum #1, #2}{#1}
-}
-
-\newcommand{\odeVerse}[1]{{\formatTextVerseNumber\large#1:}\hspace{0.5em}}
-
-\newcommand{\prayerTitle}[1]{%
-  \hfill%
-  \phantom{0}\raisebox{0.35ex}[\ht\strutbox][\dp\strutbox]{\formatTextPsalmChapter\MakeLowercase{#1}}\phantom{0}%
-  \hfill%
-}
-
-\newcommand{\psalmChapter}[1]{%
-  \makeChapter{Psalmus #1}{#1}
-}
-
-\newcommand{\psalmVerse}[1]{%
-  \makeVerse{#1}
-}
-
-\newcommand{\psalmInscription}[1]{%
-  {\formatTextInscription\MakeLowercase{#1}~:}
-}
-
-\newcommand{\psalmSkip}[1]{\vspace*{#1\baselineskip}}
-
-\newcommand{\psalmEndI}{%
-  {\notefont\normalsize\phantom{..}\raisebox{0.5ex}{+}}
-
-  \vspace*{1\baselineskip}
-}
-
-\newcommand{\psalmEndII}{%
-  {\notefont\normalsize\phantom{..}\raisebox{0.5ex}{+}}
-
-  \vspace*{2\baselineskip}
-}
-
-\newcommand{\psalmEndNewPage}{%
-  {\notefont\normalsize\phantom{..}\raisebox{0.5ex}{+}}
-
-  \newpage
-}
-
-\newcommand{\psalmEndPictureNewPage}{%
-  %\vfill\vfill
-
-  %{\hfill
-  %{\huge\raisebox{1.9ex}{-}}\hspace{1.5em}
-  %{\fontsize{90}{60}\selectfont\raisebox{-0.15ex}{º}}\hspace{1.5em}
-  %{\huge\raisebox{1.9ex}{-}}
-  %\hfill}
-
-  %\vfill\vfill\vfill
-
-  \newpage
-}
-
-\newcommand{\psalmEndDecorate}[1]{%
-
-  \vspace*{#1\baselineskip}
-  {\hfill \raisebox{0.5ex}{·} \hspace*{3.0em} {\LARGE ✠} \hspace*{3.0em} \raisebox{0.5ex}{·} \hfill}
-  \vspace*{#1\baselineskip}
-
-}
-
-\newcommand{\psalmEndDecorateNewPage}{%
-
-  \vfill
-  {\hfill \raisebox{0.5ex}{·} \hspace*{2.0em} {\LARGE ✠} \hspace*{2.0em} \raisebox{0.5ex}{·} \hfill}
-  \vfill
-  \newpage
-
-}
-
-\newcommand{\setPageHeaderTitle}[1]{%
-  \chead{\formatTextHeader\MakeLowercase{#1}}
-}
+\input{psalter-fmt}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -123,75 +24,77 @@
 \renewcommand{\thepage}{{\formatTextNote\arabic{page}}}
 
 \begin{document}
+\large
+%\pagestyle{empty}
+%\setcounter{page}{0}
 
-\pagestyle{empty}
-\setcounter{page}{0}
+%\vspace*{\fill}
 
-\vspace*{\fill}
+%\begin{center}
+%{Psalterium}
 
-\begin{center}
-{Psalterium}
+%\skipII
+
+%%{\fontsize{50}{60}\selectfont ✠}
+%\includegraphics[width=0.15\textwidth]{images/harp}
+
+%\skipII
+
+%{Pennsylvanicum}
+
+%\skipII
+
+%{\formatTextNoteSection
+
+  %psalmi davidi
+
+  %\skipI
+
+  %cum canticis aliisque precibus
+%}
+
+%\end{center}
+
+%\vfill\vfill
+%\newpage
+
+%\pagestyle{fancy}
+
+%\setPageHeaderTitle{Distributio Psalmorum}
+%\input{tables}
+
+%\large
+
+%\setPageHeaderTitle{Oratio Initialis}
+%\input{beginning}
+
+%\newpage
+
+\setPageHeaderTitle{Salmi Davidi}
 
 \skipII
 
-%{\fontsize{50}{60}\selectfont ✠}
-\includegraphics[width=0.15\textwidth]{images/harp}
+{\formatTextNoteSection\centering
 
-\skipII
-
-{Pennsylvanicum}
-
-\skipII
-
-{\formatTextNoteSection
-
-  psalmi davidi
+  INCIPIT
 
   \skipI
 
-  cum canticis aliisque precibus
-}
-
-\end{center}
-
-\vfill\vfill
-\newpage
-
-\pagestyle{fancy}
-
-\setPageHeaderTitle{Distribuzio Psalmorum}
-\input{tables}
-
-\large
-
-\setPageHeaderTitle{Orazio Inizialis}
-\input{beginning}
-
-\newpage
-
-\setPageHeaderTitle{Psalmi Davidi}
-
-\skipH
-
-{\formatTextNoteSection
-
-  {\hfill Ìnċipit \hfill}
-
-  {\hfill lìber psalmórum \hfill}
+  LIBER SALMORUM
 
 }
 
-\skipIH
+\skipIIH
 
 \input{tmp/psalmi}
 
-{\formatTextNoteSection
+{\formatTextNoteSection\centering
 
   \vfill
 
-  {\hfill Èxpliċit \hfill}
+  EXPLICIT
 
-  {\hfill lìber psalmórum \hfill}
+  LIBER PSALMORUM
 
   \vfill
 }

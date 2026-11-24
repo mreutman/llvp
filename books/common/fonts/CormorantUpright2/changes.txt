@@ -1,0 +1,14 @@
+Modifications from Cormorant Upright
+- grave: right 10x1, move top down by 10x5
+- acute: left 10x1, move top down by 10x5
+- circumflex: move top down by 10x5, sides out 10x2, bottom middle down 10x2
+- remove 'fi' ligature from liga substitution, causes instead 'f.short i'
+- acute case: copy acute, move top down 10x2, extend left face by 5
+- grave case: copy acute, move top down 10x2, move right 10x1, extend right face by 5
+- circumflex case: copy circumflex, move top down 10x2, move bottom middle down 10x1, move bottom left & right corners out 10x1
+- add kerning lookup to fix missing r+(á, à, â) 
+- add i-bar
+- macron: increase thickness, raise height to match dot accent
+- Change capital thorn to look like pseudo-theta
+- dot accent: move down 10x2
+- increase thickness of guillemets

@@ -5,7 +5,7 @@ import re
 import pdb
 
 CHAPTER_VSPACE = {}
-CHAPTER_VSPACE[1] = "\\psalmEndI"
+CHAPTER_VSPACE[1] = "\\psalmEndII"
 CHAPTER_VSPACE[2] = "\\psalmEndNewPage"
 CHAPTER_VSPACE[3] = "\\psalmEndI"
 CHAPTER_VSPACE[4] = "\\psalmEndI"
@@ -165,11 +165,11 @@ def print_chapter(_chapter, _inscript, _body):
   else:
     text = _body
 
-  text = text.replace("¿", "¿~")
-  text = text.replace("?", "~?")
-  text = text.replace(";", "~;")
-  text = text.replace("«", "«~")
-  text = text.replace("»", "~»")
+  #text = text.replace("¿", "¿~")
+  #text = text.replace("?", "~?")
+  #text = text.replace(";", "~;")
+  #text = text.replace("«", "«~")
+  #text = text.replace("»", "~»")
   text = text.replace(KEY_PRINTER_LINEBREAK, TEX_LINEBREAK)
   text = text + CHAPTER_VSPACE[_chapter]
 
@@ -205,51 +205,6 @@ while line:
     body = ""
 
   if is_inscript:
-
-    text = text.replace("Ċ", "C")
-    text = text.replace("Ġ", "G")
-    text = text.replace("W", "V")
-    text = text.replace("Á", "A")
-    text = text.replace("Ó", "O")
-    text = text.replace("É", "E")
-    text = text.replace("Ú", "U")
-    text = text.replace("Í", "I")
-    text = text.replace("Ý", "Y")
-    text = text.replace("À", "A")
-    text = text.replace("Ò", "O")
-    text = text.replace("È", "E")
-    text = text.replace("Ù", "U")
-    text = text.replace("Ì", "I")
-    text = text.replace("Ỳ", "Y")
-    text = text.replace("Â", "A")
-    text = text.replace("Ô", "O")
-    text = text.replace("Ê", "E")
-    text = text.replace("Û", "U")
-    text = text.replace("Î", "I")
-    text = text.replace("Ŷ", "Y")
-
-    text = text.replace("ċ", "c")
-    text = text.replace("ġ", "g")
-    text = text.replace("w", "v")
-    text = text.replace("á", "a")
-    text = text.replace("ó", "o")
-    text = text.replace("é", "e")
-    text = text.replace("ú", "u")
-    text = text.replace("í", "i")
-    text = text.replace("ý", "y")
-    text = text.replace("à", "a")
-    text = text.replace("ò", "o")
-    text = text.replace("è", "e")
-    text = text.replace("ù", "u")
-    text = text.replace("ì", "i")
-    text = text.replace("ỳ", "y")
-    text = text.replace("â", "a")
-    text = text.replace("ô", "o")
-    text = text.replace("ê", "e")
-    text = text.replace("û", "u")
-    text = text.replace("î", "i")
-    text = text.replace("ŷ", "y")
-    
     inscript = (inscript +
       "\\psalmVerse{" + str(verse) + "}" + text + " ")
 

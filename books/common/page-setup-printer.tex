@@ -75,27 +75,37 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setmainfont[
-  Path = ./common/fonts/KJV1611/,
-  Extension = .otf,
+  Path = ./common/fonts/CormorantUpright2/,
+  Extension = .ttf,
   UprightFont = *-Regular,
-  Ligatures={NoCommon, NoDiscretionary}
-]{KJV1611}
+  Numbers=Lining
+]{CormorantUpright2}
 
 \newfontfamily\notefont[
   Path = ./common/fonts/EBGaramond/static/,
   Extension = .ttf,
   UprightFont = *-Regular,
   ItalicFont = *-Italic,
-  BoldFont = *-ExtraBold,
-  BoldItalicFont = *-ExtraBoldItalic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+  Numbers=Lining
+]{EBGaramond}
+
+% Extra bold family
+\newfontfamily\extraboldfont[
+  Path = ./common/fonts/EBGaramond/static/,
+  Extension = .ttf,
+  UprightFont = *-ExtraBold,
+  ItalicFont = *-ExtraBoldItalic,
+  Numbers=Lining
 ]{EBGaramond}
 
 %\setlength{\emergencystretch}{6em}
 \EverySelectfont{%
-%\fontdimen2\font=1em% interword space
-\fontdimen3\font=4.5em% interword stretch
+%%\fontdimen2\font=1em% interword space
+\fontdimen3\font=1.5em% interword stretch
 \fontdimen4\font=0.2em% interword shrink
-%\fontdimen7\font=0.2em% extra space
+%%\fontdimen7\font=0.2em% extra space
 }
 
 \setstretch{1.15}
@@ -111,7 +121,7 @@
 {\large\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1.0em}
 
 \newcommand{\formatTextHeader}
-{\notefont\scshape\addfontfeature{LetterSpace=15.0}\fontdimen2\font=0.75em}
+{\notefont\addfontfeature{LetterSpace=15.0}\fontdimen2\font=0.75em}
 
 \newcommand{\formatTextNote}
 {\notefont\scshape\footnotesize\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1em}
@@ -120,7 +130,7 @@
 {\upshape\scriptsize}
 
 \newcommand{\formatTextNoteSection}
-{\notefont\scshape\large\addfontfeature{LetterSpace=10.0}\fontdimen2\font=0.75em}
+{\notefont\bfseries\small\addfontfeature{LetterSpace=20.0}\fontdimen2\font=1.0em}
 
 \newcommand{\formatTextSection}
 {\Large\addfontfeature{LetterSpace=20.0}\fontdimen2\font=1.0em}
