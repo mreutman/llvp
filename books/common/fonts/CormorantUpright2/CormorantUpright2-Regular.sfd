@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1483559966
-ModificationTime: 1795490771
+ModificationTime: 1795492608
 PfmFamily: 81
 TTFWeight: 600
 TTFWidth: 5
@@ -4132,7 +4132,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 494 38 14
+WinInfo: 266 38 14
 BeginPrivate: 0
 EndPrivate
 AnchorClass2: "Anchor-0" "'mark' Mark Positioning in Latin lookup 4 subtable" "Anchor-1" "'mark' Mark Positioning in Latin lookup 4 subtable" "Anchor-2" "'mark' Mark Positioning in Latin lookup 4 subtable" "Anchor-3" "'mark' Mark Positioning in Latin lookup 4 subtable" "Anchor-4" "'mark' Mark Positioning in Latin lookup 5 subtable" "Anchor-5" "'mark' Mark Positioning in Latin lookup 5 subtable" "Anchor-6" "'mark' Mark Positioning in Latin lookup 5 subtable" "Anchor-7" "'mark' Mark Positioning in Latin lookup 5 subtable" "Anchor-8" "'mark' Mark Positioning in Latin lookup 6 subtable" "Anchor-9" "'mark' Mark Positioning in Latin lookup 6 subtable" "Anchor-10" "'mark' Mark Positioning in Latin lookup 6 subtable" "Anchor-11" "'mark' Mark Positioning in Latin lookup 6 subtable" "Anchor-12" "'mark' Mark Positioning in Latin lookup 7 subtable" "Anchor-13" "'mark' Mark Positioning in Latin lookup 7 subtable" "Anchor-14" "'mark' Mark Positioning in Latin lookup 7 subtable" "Anchor-15" "'mkmk' Mark to Mark in Latin lookup 8 subtable" "Anchor-16" "'mkmk' Mark to Mark in Latin lookup 9 subtable" "Anchor-17" "'mkmk' Mark to Mark in Latin lookup 10 subtable" "Anchor-18" "'mkmk' Mark to Mark in Latin lookup 11 subtable"
@@ -97497,15 +97497,15 @@ AnchorPoint: "Anchor-0" -70 386 mark 0
 LayerCount: 2
 Fore
 SplineSet
--57 471.5 m 0,0,1
- -44 473.666666667 -44 473.666666667 -44 476 c 6,2,-1
- -83 666 l 2,3,4
- -84 672 -84 672 -108.5 677 c 128,-1,5
- -133 682 -133 682 -158 682 c 0,6,7
- -165 682 -165 682 -170 680.5 c 128,-1,8
- -175.092773438 678.97265625 -175.092773438 678.97265625 -174 677 c 2,9,-1
- -61 473 l 2,10,11
- -60 471 -60 471 -57 471.5 c 0,0,1
+-47 471.5 m 0,0,1
+ -34 473.666992188 -34 473.666992188 -34 476 c 2,2,-1
+ -73 666 l 2,3,4
+ -74 672 -74 672 -98.5 677 c 128,-1,5
+ -123 682 -123 682 -148 682 c 0,6,7
+ -155 682 -155 682 -160 680.5 c 128,-1,8
+ -165.092773438 678.97265625 -165.092773438 678.97265625 -164 677 c 2,9,-1
+ -51 473 l 2,10,11
+ -50 471 -50 471 -47 471.5 c 0,0,1
 EndSplineSet
 Validated: 524297
 Substitution2: "Single Substitution lookup 55 subtable" gravecomb.case
@@ -97528,15 +97528,15 @@ AnchorPoint: "Anchor-0" -141 386 mark 0
 LayerCount: 2
 Fore
 SplineSet
--156 471.5 m 4,0,1
- -169 473.666992188 -169 473.666992188 -169 476 c 6,2,-1
- -130 666 l 6,3,4
- -129 672 -129 672 -104.5 677 c 132,-1,5
- -80 682 -80 682 -55 682 c 4,6,7
- -48 682 -48 682 -43 680.5 c 132,-1,8
- -37.9072265625 678.97265625 -37.9072265625 678.97265625 -39 677 c 6,9,-1
- -152 473 l 6,10,11
- -153 471 -153 471 -156 471.5 c 4,0,1
+-166 471.5 m 4,0,1
+ -179 473.666992188 -179 473.666992188 -179 476 c 6,2,-1
+ -140 666 l 6,3,4
+ -139 672 -139 672 -114.5 677 c 132,-1,5
+ -90 682 -90 682 -65 682 c 4,6,7
+ -58 682 -58 682 -53 680.5 c 132,-1,8
+ -47.9072265625 678.97265625 -47.9072265625 678.97265625 -49 677 c 6,9,-1
+ -162 473 l 6,10,11
+ -163 471 -163 471 -166 471.5 c 4,0,1
 EndSplineSet
 Validated: 524289
 Substitution2: "Single Substitution lookup 55 subtable" acutecomb.case
@@ -100026,26 +100026,26 @@ Flags: W
 LayerCount: 2
 Fore
 SplineSet
-17 482 m 128,-1,1
- 3 495 3 495 3 519 c 0,2,3
- 3 541 3 541 17 554 c 128,-1,4
- 31 567 31 567 54 567 c 256,5,6
- 77 567 77 567 90 554.5 c 128,-1,7
- 103 542 103 542 103 519 c 0,8,9
- 103 495 103 495 90 482 c 128,-1,10
- 77 469 77 469 54 469 c 256,11,0
- 31 469 31 469 17 482 c 128,-1,1
-185.5 482 m 128,-1,13
- 172 495 172 495 172 519 c 0,14,15
- 172 541 172 541 185.5 554 c 128,-1,16
- 199 567 199 567 222 567 c 256,17,18
- 245 567 245 567 257.5 554.5 c 128,-1,19
- 270 542 270 542 270 519 c 0,20,21
- 270 495 270 495 257.5 482 c 128,-1,22
- 245 469 245 469 222 469 c 256,23,12
- 199 469 199 469 185.5 482 c 128,-1,13
+20.599609375 485.599609375 m 128,-1,1
+ 8 497.299804688 8 497.299804688 8 518.900390625 c 0,2,3
+ 8 538.700195312 8 538.700195312 20.599609375 550.400390625 c 128,-1,4
+ 33.2001953125 562.099609375 33.2001953125 562.099609375 53.900390625 562.099609375 c 256,5,6
+ 74.599609375 562.099609375 74.599609375 562.099609375 86.2998046875 550.849609375 c 128,-1,7
+ 98 539.599609375 98 539.599609375 98 518.900390625 c 0,8,9
+ 98 497.299804688 98 497.299804688 86.2998046875 485.599609375 c 128,-1,10
+ 74.599609375 473.900390625 74.599609375 473.900390625 53.900390625 473.900390625 c 256,11,0
+ 33.2001953125 473.900390625 33.2001953125 473.900390625 20.599609375 485.599609375 c 128,-1,1
+189.049804688 485.599609375 m 132,-1,13
+ 177 497 177 497 176.900390625 518.900390625 c 4,14,15
+ 177 539 177 539 189.049804688 550.400390625 c 132,-1,16
+ 201 562 201 562 221.900390625 562.099609375 c 260,17,18
+ 243 562 243 562 253.849609375 550.849609375 c 4,19,20
+ 265 540 265 540 265.099609375 518.900390625 c 4,21,22
+ 265 497 265 497 253.849609375 485.599609375 c 4,23,24
+ 243 474 243 474 221.900390625 473.900390625 c 260,25,12
+ 201 474 201 474 189.049804688 485.599609375 c 132,-1,13
 EndSplineSet
-Validated: 1
+Validated: 524289
 Substitution2: "'ss04' Style Set 4 in Latin lookup 51 subtable" dieresis.ss04
 Substitution2: "'aalt' Access All Alternates in Latin lookup 0 subtable" dieresis.ss04
 EndChar
@@ -100054,7 +100054,7 @@ StartChar: dotaccent
 Encoding: 729 729 1144
 Width: 146
 GlyphClass: 1
-Flags: WO
+Flags: W
 LayerCount: 2
 Fore
 SplineSet
