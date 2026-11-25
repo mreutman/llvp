@@ -22,26 +22,32 @@
   \makeVerse{#1}
 }
 
+%\newcommand{\psalmInscription}[1]{%
+%  {\formatTextInscription\centering #1\par}
+%}
+
 \newcommand{\psalmInscription}[1]{%
-  {\formatTextInscription\centering #1\par}
+  {\begin{quoting}\centering
+  #1
+  \par\end{quoting}}
 }
 
 \newcommand{\psalmSkip}[1]{\vspace*{#1\baselineskip}}
 
 \newcommand{\psalmEndI}{%
-  {\extraboldfont\footnotesize\phantom{..}\raisebox{0.25ex}{+}}
+  {\extraboldfont\small\phantom{..}\raisebox{0.20ex}{+}}
 
   \vspace*{1\baselineskip}
 }
 
 \newcommand{\psalmEndII}{%
-  {\extraboldfont\footnotesize\phantom{..}\raisebox{0.25ex}{+}}
+  {\extraboldfont\small\phantom{..}\raisebox{0.20ex}{+}}
 
   \vspace*{2\baselineskip}
 }
 
 \newcommand{\psalmEndNewPage}{%
-  {\extraboldfont\footnotesize\phantom{..}\raisebox{0.25ex}{+}}
+  {\extraboldfont\small\phantom{..}\raisebox{0.20ex}{+}}
 
   \newpage
 }
@@ -60,18 +66,21 @@
   \newpage
 }
 
+\newcommand{\raiseVal}{0.75ex}
+\newcommand{\hspaceVal}{2.0em}
+
 \newcommand{\psalmEndDecorate}[1]{%
 
   \vspace*{#1\baselineskip}
-  {\hfill \raisebox{0.5ex}{·} \hspace*{3.0em} {\LARGE ✠} \hspace*{3.0em} \raisebox{0.5ex}{·} \hfill}
+  {\centering \raisebox{\raiseVal}{–} \hspace*{\hspaceVal} {\LARGE ✠} \hspace*{\hspaceVal} \raisebox{\raiseVal}{–} \par}
   \vspace*{#1\baselineskip}
 
 }
 
 \newcommand{\psalmEndDecorateNewPage}{%
 
-  \vfill
-  {\hfill \raisebox{0.5ex}{·} \hspace*{2.0em} {\LARGE ✠} \hspace*{2.0em} \raisebox{0.5ex}{·} \hfill}
+  \vfill\vfill
+  {\centering \raisebox{\raiseVal}{–} \hspace*{\hspaceVal} {\LARGE ✠} \hspace*{\hspaceVal} \raisebox{\raiseVal}{–} \par}
   \vfill
   \newpage
 

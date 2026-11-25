@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{fontspec}
 \usepackage{multirow}
+\usepackage{quoting}
 \usepackage{setspace}
 \usepackage{svg}
 
@@ -13,10 +14,10 @@
 \usepackage[
   papersize={8.5in,11in},
   layout=letterpaper,
-  right=1.0in,
-  left=1.0in,
-  lines=45,
-  top=0.7in,
+  right=1.1in,
+  left=1.1in,
+  top=0.8in,
+  lines=44,
   headheight=14.5pt,
   includehead,
   heightrounded,
@@ -103,13 +104,18 @@
 %\setlength{\emergencystretch}{6em}
 \EverySelectfont{%
 %%\fontdimen2\font=1em% interword space
-\fontdimen3\font=1.5em% interword stretch
-\fontdimen4\font=0.2em% interword shrink
+\fontdimen3\font=1.0em% interword stretch
+%\fontdimen4\font=0.2em% interword shrink
 %%\fontdimen7\font=0.2em% extra space
 }
 
+\quotingsetup{
+  leftmargin=3em,
+  rightmargin=3em,
+  vskip=0em
+}
+
 \setstretch{1.15}
-\setlength{\emergencystretch}{3em}
 \raggedbottom
 
 \setlength{\parindent}{0em}
