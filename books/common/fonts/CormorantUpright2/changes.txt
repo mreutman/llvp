@@ -1,8 +1,8 @@
 Modifications from Cormorant Upright
-- grave: right 10x1, move top down by 10x5
-- acute: left 10x1, move top down by 10x5
-- gravecomb (ì only): borrow grave, move right 10x1
-- acutecomb (í only): borrow acute, move left 10x1
+- grave: right 15, move top down by 10x5
+- acute: left 15, move top down by 10x5
+- gravecomb (ì only): borrow grave, move right 15
+- acutecomb (í only): borrow acute, move left 15
 - circumflex: move top down by 10x5, sides out 10x2, bottom middle down 10x2
 - remove 'fi' ligature from liga substitution, causes instead 'f.short i'
 - acute case: copy acute, move top down 10x2, extend left face by 5

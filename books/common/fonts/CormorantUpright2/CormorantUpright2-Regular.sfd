@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1483559966
-ModificationTime: 1795492608
+ModificationTime: 1795576086
 PfmFamily: 81
 TTFWeight: 600
 TTFWidth: 5
@@ -4132,7 +4132,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 266 38 14
+WinInfo: 380 38 14
 BeginPrivate: 0
 EndPrivate
 AnchorClass2: "Anchor-0" "'mark' Mark Positioning in Latin lookup 4 subtable" "Anchor-1" "'mark' Mark Positioning in Latin lookup 4 subtable" "Anchor-2" "'mark' Mark Positioning in Latin lookup 4 subtable" "Anchor-3" "'mark' Mark Positioning in Latin lookup 4 subtable" "Anchor-4" "'mark' Mark Positioning in Latin lookup 5 subtable" "Anchor-5" "'mark' Mark Positioning in Latin lookup 5 subtable" "Anchor-6" "'mark' Mark Positioning in Latin lookup 5 subtable" "Anchor-7" "'mark' Mark Positioning in Latin lookup 5 subtable" "Anchor-8" "'mark' Mark Positioning in Latin lookup 6 subtable" "Anchor-9" "'mark' Mark Positioning in Latin lookup 6 subtable" "Anchor-10" "'mark' Mark Positioning in Latin lookup 6 subtable" "Anchor-11" "'mark' Mark Positioning in Latin lookup 6 subtable" "Anchor-12" "'mark' Mark Positioning in Latin lookup 7 subtable" "Anchor-13" "'mark' Mark Positioning in Latin lookup 7 subtable" "Anchor-14" "'mark' Mark Positioning in Latin lookup 7 subtable" "Anchor-15" "'mkmk' Mark to Mark in Latin lookup 8 subtable" "Anchor-16" "'mkmk' Mark to Mark in Latin lookup 9 subtable" "Anchor-17" "'mkmk' Mark to Mark in Latin lookup 10 subtable" "Anchor-18" "'mkmk' Mark to Mark in Latin lookup 11 subtable"
@@ -97497,15 +97497,15 @@ AnchorPoint: "Anchor-0" -70 386 mark 0
 LayerCount: 2
 Fore
 SplineSet
--47 471.5 m 0,0,1
- -34 473.666992188 -34 473.666992188 -34 476 c 2,2,-1
- -73 666 l 2,3,4
- -74 672 -74 672 -98.5 677 c 128,-1,5
- -123 682 -123 682 -148 682 c 0,6,7
- -155 682 -155 682 -160 680.5 c 128,-1,8
- -165.092773438 678.97265625 -165.092773438 678.97265625 -164 677 c 2,9,-1
- -51 473 l 2,10,11
- -50 471 -50 471 -47 471.5 c 0,0,1
+-42 471.5 m 4,0,1
+ -29 473.666992188 -29 473.666992188 -29 476 c 6,2,-1
+ -68 666 l 6,3,4
+ -69 672 -69 672 -93.5 677 c 132,-1,5
+ -118 682 -118 682 -143 682 c 4,6,7
+ -150 682 -150 682 -155 680.5 c 132,-1,8
+ -160.092773438 678.97265625 -160.092773438 678.97265625 -159 677 c 6,9,-1
+ -46 473 l 6,10,11
+ -45 471 -45 471 -42 471.5 c 4,0,1
 EndSplineSet
 Validated: 524297
 Substitution2: "Single Substitution lookup 55 subtable" gravecomb.case
@@ -97528,15 +97528,15 @@ AnchorPoint: "Anchor-0" -141 386 mark 0
 LayerCount: 2
 Fore
 SplineSet
--166 471.5 m 4,0,1
- -179 473.666992188 -179 473.666992188 -179 476 c 6,2,-1
- -140 666 l 6,3,4
- -139 672 -139 672 -114.5 677 c 132,-1,5
- -90 682 -90 682 -65 682 c 4,6,7
- -58 682 -58 682 -53 680.5 c 132,-1,8
- -47.9072265625 678.97265625 -47.9072265625 678.97265625 -49 677 c 6,9,-1
- -162 473 l 6,10,11
- -163 471 -163 471 -166 471.5 c 4,0,1
+-171 471.5 m 4,0,1
+ -184 473.666992188 -184 473.666992188 -184 476 c 6,2,-1
+ -145 666 l 6,3,4
+ -144 672 -144 672 -119.5 677 c 132,-1,5
+ -95 682 -95 682 -70 682 c 4,6,7
+ -63 682 -63 682 -58 680.5 c 132,-1,8
+ -52.9072265625 678.97265625 -52.9072265625 678.97265625 -54 677 c 6,9,-1
+ -167 473 l 6,10,11
+ -168 471 -168 471 -171 471.5 c 4,0,1
 EndSplineSet
 Validated: 524289
 Substitution2: "Single Substitution lookup 55 subtable" acutecomb.case
@@ -99726,15 +99726,15 @@ Flags: W
 LayerCount: 2
 Fore
 SplineSet
-56 471.5 m 4,0,1
- 43 473.666666667 43 473.666666667 43 476 c 6,2,-1
- 82 666 l 6,3,4
- 83 672 83 672 107.5 677 c 132,-1,5
- 132 682 132 682 157 682 c 4,6,7
- 164 682 164 682 169 680.5 c 132,-1,8
- 174.09247583 678.972257251 174.09247583 678.972257251 173 677 c 6,9,-1
- 60 473 l 6,10,11
- 59 471 59 471 56 471.5 c 4,0,1
+51 471.5 m 0,0,1
+ 38 473.666992188 38 473.666992188 38 476 c 2,2,-1
+ 77 666 l 2,3,4
+ 78 672 78 672 102.5 677 c 128,-1,5
+ 127 682 127 682 152 682 c 0,6,7
+ 159 682 159 682 164 680.5 c 128,-1,8
+ 169.092773438 678.97265625 169.092773438 678.97265625 168 677 c 2,9,-1
+ 55 473 l 2,10,11
+ 54 471 54 471 51 471.5 c 0,0,1
 EndSplineSet
 Validated: 524289
 Substitution2: "Single Substitution lookup 55 subtable" acute.case
@@ -100045,7 +100045,7 @@ SplineSet
  243 474 243 474 221.900390625 473.900390625 c 260,25,12
  201 474 201 474 189.049804688 485.599609375 c 132,-1,13
 EndSplineSet
-Validated: 524289
+Validated: 1
 Substitution2: "'ss04' Style Set 4 in Latin lookup 51 subtable" dieresis.ss04
 Substitution2: "'aalt' Access All Alternates in Latin lookup 0 subtable" dieresis.ss04
 EndChar
@@ -100068,7 +100068,7 @@ SplineSet
  96.400390625 486.349609375 96.400390625 486.349609375 73.900390625 486.349609375 c 4,11,0
  50.5 486.349609375 50.5 486.349609375 37.4501953125 499.400390625 c 132,-1,1
 EndSplineSet
-Validated: 524289
+Validated: 1
 Substitution2: "Single Substitution lookup 55 subtable" dotaccent.case
 Substitution2: "'case' Case-Sensitive Forms in Latin lookup 30 subtable" dotaccent.case
 Substitution2: "'aalt' Access All Alternates in Latin lookup 0 subtable" dotaccent.case
@@ -100078,19 +100078,19 @@ StartChar: grave
 Encoding: 96 96 1145
 Width: 166
 GlyphClass: 1
-Flags: W
+Flags: WO
 LayerCount: 2
 Fore
 SplineSet
-136 471.5 m 0,0,1
- 149 473.666666667 149 473.666666667 149 476 c 6,2,-1
- 110 666 l 2,3,4
- 109 672 109 672 84.5 677 c 128,-1,5
- 60 682 60 682 35 682 c 0,6,7
- 28 682 28 682 23 680.5 c 128,-1,8
- 17.9072265625 678.97265625 17.9072265625 678.97265625 19 677 c 2,9,-1
- 132 473 l 2,10,11
- 133 471 133 471 136 471.5 c 0,0,1
+141 471.5 m 4,0,1
+ 154 473.666992188 154 473.666992188 154 476 c 6,2,-1
+ 115 666 l 6,3,4
+ 114 672 114 672 89.5 677 c 132,-1,5
+ 65 682 65 682 40 682 c 4,6,7
+ 33 682 33 682 28 680.5 c 132,-1,8
+ 22.9072265625 678.97265625 22.9072265625 678.97265625 24 677 c 6,9,-1
+ 137 473 l 6,10,11
+ 138 471 138 471 141 471.5 c 4,0,1
 EndSplineSet
 Validated: 524297
 Substitution2: "Single Substitution lookup 55 subtable" grave.case
@@ -102139,7 +102139,7 @@ SplineSet
 EndSplineSet
 Refer: 410 305 N 1 0 0 1 0 0 0
 Refer: 1144 729 N 1 0 0 1 50 0 0
-Validated: 524293
+Validated: 5
 EndChar
 
 StartChar: uni2720
@@ -102186,7 +102186,7 @@ SplineSet
  471.689069005 47.9501953125 471.689069005 47.9501953125 385.049804688 47.9501953125 c 0,56,57
  299.310930995 47.9501953125 299.310930995 47.9501953125 229.349609375 8.349609375 c 0,0,1
 EndSplineSet
-Validated: 524289
+Validated: 1
 EndChar
 EndChars
 EndSplineFont
