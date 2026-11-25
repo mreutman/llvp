@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1483559966
-ModificationTime: 1795576086
+ModificationTime: 1795576736
 PfmFamily: 81
 TTFWeight: 600
 TTFWidth: 5
@@ -97507,7 +97507,7 @@ SplineSet
  -46 473 l 6,10,11
  -45 471 -45 471 -42 471.5 c 4,0,1
 EndSplineSet
-Validated: 524297
+Validated: 9
 Substitution2: "Single Substitution lookup 55 subtable" gravecomb.case
 Substitution2: "'case' Case-Sensitive Forms in Latin lookup 30 subtable" gravecomb.case
 Substitution2: "'aalt' Access All Alternates in Latin lookup 0 subtable" gravecomb.case
@@ -97538,7 +97538,7 @@ SplineSet
  -167 473 l 6,10,11
  -168 471 -168 471 -171 471.5 c 4,0,1
 EndSplineSet
-Validated: 524289
+Validated: 1
 Substitution2: "Single Substitution lookup 55 subtable" acutecomb.case
 Substitution2: "'case' Case-Sensitive Forms in Latin lookup 30 subtable" acutecomb.case
 Substitution2: "'locl' Localized Forms in Latin lookup 8 subtable" acutecomb.loclHUN
@@ -97620,20 +97620,20 @@ AnchorPoint: "Anchor-0" -116 386 mark 0
 LayerCount: 2
 Fore
 SplineSet
--3 477 m 6,0,1
- -3.14351320321 477.285591274 -3.14351320321 477.285591274 -18 474.5 c 4,2,3
- -23.2836879433 473.971631206 -23.2836879433 473.971631206 -25 476 c 6,4,-1
- -113 580 l 5,5,-1
- -201 474 l 6,6,7
- -203 472 -203 472 -205 472 c 4,8,9
- -208 472 -208 472 -210.5 473.5 c 4,10,11
- -213.928571429 474.969387755 -213.928571429 474.969387755 -213 477 c 6,12,-1
- -122 676 l 6,13,14
- -120 681 -120 681 -112 681 c 4,15,16
- -105.512562814 681 -105.512562814 681 -103 676 c 6,17,-1
- -3 477 l 6,0,1
+-3 477 m 2,0,1
+ -3 477 -3 477 -23 474.5 c 4,2,3
+ -28.3739982191 473.962600178 -28.3739982191 473.962600178 -30 476 c 6,4,-1
+ -113 580 l 1,5,-1
+ -196 474 l 2,6,7
+ -198 472 -198 472 -200 472 c 0,8,9
+ -206 472 -206 472 -209.964285714 473.484693878 c 128,-1,10
+ -213.92709124 474.97262465 -213.92709124 474.97262465 -213 477 c 2,11,-1
+ -122 676 l 2,12,13
+ -120 681 -120 681 -112 681 c 0,14,15
+ -105.512562814 681 -105.512562814 681 -103 676 c 2,16,-1
+ -3 477 l 2,0,1
 EndSplineSet
-Validated: 1
+Validated: 524289
 Substitution2: "Single Substitution lookup 55 subtable" uni0302.case
 Substitution2: "'case' Case-Sensitive Forms in Latin lookup 30 subtable" uni0302.case
 Substitution2: "'aalt' Access All Alternates in Latin lookup 0 subtable" uni0302.case
@@ -99736,7 +99736,7 @@ SplineSet
  55 473 l 2,10,11
  54 471 54 471 51 471.5 c 0,0,1
 EndSplineSet
-Validated: 524289
+Validated: 1
 Substitution2: "Single Substitution lookup 55 subtable" acute.case
 Substitution2: "'case' Case-Sensitive Forms in Latin lookup 30 subtable" acute.case
 Substitution2: "'locl' Localized Forms in Latin lookup 15 subtable" acute.loclPLK
@@ -99995,24 +99995,24 @@ StartChar: circumflex
 Encoding: 710 710 1142
 Width: 239
 GlyphClass: 1
-Flags: W
+Flags: WO
 LayerCount: 2
 Fore
 SplineSet
 237 477 m 2,0,1
- 236.856445312 477.28515625 236.856445312 477.28515625 222 474.5 c 0,2,3
- 216.716796875 473.971679688 216.716796875 473.971679688 215 476 c 2,4,-1
+ 237 477 237 477 217 474.5 c 4,2,3
+ 211.626001781 473.962600178 211.626001781 473.962600178 210 476 c 6,4,-1
  127 580 l 1,5,-1
- 39 474 l 2,6,7
- 37 472 37 472 35 472 c 0,8,9
- 32 472 32 472 29.5 473.5 c 0,10,11
- 26.0712890625 474.969726562 26.0712890625 474.969726562 27 477 c 2,12,-1
- 118 676 l 2,13,14
- 120 681 120 681 128 681 c 0,15,16
- 134.487304688 681 134.487304688 681 137 676 c 2,17,-1
+ 44 474 l 2,6,7
+ 42 472 42 472 40 472 c 0,8,9
+ 34 472 34 472 30.0357142857 473.484693878 c 128,-1,10
+ 26.0729087597 474.97262465 26.0729087597 474.97262465 27 477 c 2,11,-1
+ 118 676 l 2,12,13
+ 120 681 120 681 128 681 c 0,14,15
+ 134.487437186 681 134.487437186 681 137 676 c 2,16,-1
  237 477 l 2,0,1
 EndSplineSet
-Validated: 1
+Validated: 524289
 Substitution2: "Single Substitution lookup 55 subtable" circumflex.case
 Substitution2: "'case' Case-Sensitive Forms in Latin lookup 30 subtable" circumflex.case
 Substitution2: "'aalt' Access All Alternates in Latin lookup 0 subtable" circumflex.case
@@ -100078,7 +100078,7 @@ StartChar: grave
 Encoding: 96 96 1145
 Width: 166
 GlyphClass: 1
-Flags: WO
+Flags: W
 LayerCount: 2
 Fore
 SplineSet
@@ -100092,7 +100092,7 @@ SplineSet
  137 473 l 6,10,11
  138 471 138 471 141 471.5 c 4,0,1
 EndSplineSet
-Validated: 524297
+Validated: 9
 Substitution2: "Single Substitution lookup 55 subtable" grave.case
 Substitution2: "'case' Case-Sensitive Forms in Latin lookup 30 subtable" grave.case
 Substitution2: "'aalt' Access All Alternates in Latin lookup 0 subtable" grave.case
