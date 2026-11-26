@@ -1,9 +1,8 @@
 \documentclass[twoside,12pt]{book}
 %\documentclass[twoside,12pt,showframe]{book}
 \newcommand{\pageBorderEnable}{0}
-\newcommand{\pageBorderBegin}{0}
 \newcommand{\pageHeaderEnable}{1}
-\newcommand{\pageHeaderStart}{1}
+\newcommand{\pageHeaderStart}{5}
 
 % prevent specific words from hyphenating
 %\hyphenation{unbreakableword database typescript}
@@ -18,33 +17,32 @@
 \fancyhead[LE,RO]{\footnotesize\thepage}
 \fancyhead[LO,RE]{\leftmark}
 
-\setlength{\parindent}{0em}
 \setlength{\parskip}{0pt}
 
 \renewcommand{\thepage}{{\formatTextNote\arabic{page}}}
 
 \begin{document}
-\large
-%\pagestyle{empty}
-%\setcounter{page}{0}
 
-%\vspace*{\fill}
+\pagestyle{empty}
+\setcounter{page}{0}
 
-%\begin{center}
-%{Psalterium}
+\vspace*{\fill}
 
-%\skipII
+\begin{center}
+{\extraboldfont\Huge\addfontfeature{LetterSpace=15.0}\fontdimen2\font=0.75em PSALTERIUM}
+
+\skipIV
 
 %%{\fontsize{50}{60}\selectfont ✠}
 %\includegraphics[width=0.15\textwidth]{images/harp}
 
 %\skipII
 
-%{Pennsylvanicum}
+{\extraboldfont\Huge\addfontfeature{LetterSpace=15.0}\fontdimen2\font=0.75em PENNSILVANICUM}
 
-%\skipII
+\skipII
 
-%{\formatTextNoteSection
+%{\extraboldfont\Large\addfontfeature{LetterSpace=15.0}\fontdimen2\font=0.75em
 
   %psalmi davidi
 
@@ -53,28 +51,26 @@
   %cum canticis aliisque precibus
 %}
 
-%\end{center}
+\end{center}
 
-%\vfill\vfill
-%\newpage
+\vfill\vfill
+\newpage
 
-%\pagestyle{fancy}
+\large
 
-%\setPageHeaderTitle{Distributio Psalmorum}
-%\input{tables}
+\pagestyle{fancy}
+\setPageHeaderTitle{Distributio Psalmorum}
+\input{tables}
 
-%\large
-
-%\setPageHeaderTitle{Oratio Initialis}
-%\input{beginning}
-
-%\newpage
+\setPageHeaderTitle{Oratio Initialis}
+\input{beginning}
 
 \setPageHeaderTitle{Salmi Davidi}
+\setlength{\parindent}{0em}
 
 \vspace*{\fill}
 
-{\formatTextNoteSection\centering
+{\formatTextNoteSection\bfseries\centering
 
   INCIPIT
 
@@ -90,7 +86,7 @@
 
 \vfill
 
-{\formatTextNoteSection\centering
+{\formatTextNoteSection\bfseries\centering
 
   EXPLICIT
 

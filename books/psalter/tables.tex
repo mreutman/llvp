@@ -1,22 +1,27 @@
 \vspace*{\fill}
 {\formatTextNoteSection
 
-\begin{center}
-distribuzio
-\end{center}
+\newcommand{\formatTable}{\notefont\small\addfontfeature{LetterSpace=10.0}\fontdimen2\font=0.5em}
 
-\begin{center}
-secundum graecum
-\end{center}
+{\bfseries\formatTextNoteSection\centering
+
+  DISTRIBUTIO
+
+  \skipI
+
+  SECUNDUM GRAECUM
+
+}
+
+\skipII
 
 {
   \begin{table}[h]
   \centering
-  \formatTextNoteSection
-  \normalsize
+  \formatTable
   \begin{tabular}{|cccc|}
   \hline
-  \multicolumn{1}{|c|}{\multirow{2}{*}{\normalfont Major}} & \multicolumn{3}{c|}{\normalfont Minor}   \\ \cline{2-4}
+  \multicolumn{1}{|c|}{\multirow{2}{*}{\bfseries MAJOR}} & \multicolumn{3}{c|}{\bfseries MINOR}   \\ \cline{2-4}
   \multicolumn{1}{|c|}{}   & \multicolumn{1}{c|}{\textbf{1}} & \multicolumn{1}{c|}{\textbf{2}} & \multicolumn{1}{c|}{\textbf{3}} \\ \hline
   \multicolumn{1}{|c|}{\textbf{1}}  & \multicolumn{1}{l|}{1 - 3} & \multicolumn{1}{l|}{4 - 6} & \multicolumn{1}{l|}{7 - 8} \\ \hline
   \multicolumn{1}{|c|}{\textbf{2}}  & \multicolumn{1}{l|}{9 - 10} & \multicolumn{1}{l|}{11 - 13} & \multicolumn{1}{l|}{14 - 16} \\ \hline
@@ -48,19 +53,22 @@ secundum graecum
 
 \vspace*{\fill}
 
-\begin{center}
-triginta diebus
-\end{center}
+{\bfseries\formatTextNoteSection\centering
+
+  TRIGINTA DIEBUS
+
+}
+
+\skipII
 
 {
-  \newcommand{\cA}{\normalfont Dies}
-  \newcommand{\cB}{\normalfont ad Mane}
-  \newcommand{\cC}{\normalfont ad Nocte}
+  \newcommand{\cA}{\bfseries DIES}
+  \newcommand{\cB}{\bfseries AD MANE}
+  \newcommand{\cC}{\bfseries AD NOCTE}
 
   \begin{table}[h]
   \centering
-  \formatTextNoteSection
-  \normalsize
+  \formatTable
   \begin{tabular}{|l|l|l|}
   \hline
   \cA  & \cB                          & \cC                          \\ \hline

@@ -25,7 +25,7 @@ latex:
 	$(call fntxt2tex, gloria-patri, -a)
 	$(call fntxt2tex, labia-mea-aperies, )
 	$(call fntxt2tex, pater-noster, -a)
-	$(call fntxt2tex, per-oraziones-sanctorum-patrum, -a)
+	$(call fntxt2tex, per-orationes-sanctorum-patrum, -a)
 	$(call fntxt2tex, regina-coeli, )
 	$(call fntxt2tex, rex-coelestis, )
 	$(call fntxt2tex, sanctus, )

@@ -124,10 +124,10 @@
 % Formats
 
 \newcommand{\formatTextChapter}
-{\large\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1.0em}
+{\large\addfontfeature{LetterSpace=15.0}\fontdimen2\font=1.0em}
 
 \newcommand{\formatTextHeader}
-{\notefont\addfontfeature{LetterSpace=15.0}\fontdimen2\font=0.75em}
+{\notefont\addfontfeature{LetterSpace=15.0}\fontdimen2\font=1em}
 
 \newcommand{\formatTextNote}
 {\notefont\scshape\footnotesize\addfontfeature{LetterSpace=10.0}\fontdimen2\font=1em}
@@ -136,21 +136,21 @@
 {\upshape\scriptsize}
 
 \newcommand{\formatTextNoteSection}
-{\notefont\bfseries\small\addfontfeature{LetterSpace=20.0}\fontdimen2\font=1.0em}
+{\notefont\small\addfontfeature{LetterSpace=15.0}\fontdimen2\font=1.0em}
 
 \newcommand{\formatTextSection}
-{\Large\addfontfeature{LetterSpace=20.0}\fontdimen2\font=1.0em}
+{\Large\addfontfeature{LetterSpace=15.0}\fontdimen2\font=1.0em}
 
 % Functions
 
 \newcommand{\documentChapter}[1]
 {{\hfill{\formatTextChapter #1}\hfill}\vspace*{1\baselineskip}}
 
-\newcommand{\documentNote}[2]
-{{\formatTextNote\hspace*{#2}\MakeLowercase{#1}}}
+\newcommand{\documentNote}[1]
+{{\formatTextNote\MakeLowercase{#1}}}
 
-\newcommand{\documentNoteRepeat}[2]
-{\documentNote{repetatur {\formatTextNoteRepeat #1} :}{#2}}
+\newcommand{\documentNoteRepeat}[1]
+{\documentNote{repetatur {\formatTextNoteRepeat #1} :}}
 
 \newcommand{\documentSection}[1]
 {{\hfill{\formatTextSection #1}\hfill}}
