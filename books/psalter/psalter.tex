@@ -1,6 +1,6 @@
 \documentclass[twoside,12pt]{book}
 %\documentclass[twoside,12pt,showframe]{book}
-\newcommand{\pageBorderEnable}{1}
+\newcommand{\pageBorderEnable}{0}
 \newcommand{\pageBorderBegin}{0}
 \newcommand{\pageHeaderEnable}{1}
 \newcommand{\pageHeaderStart}{1}
@@ -88,16 +88,19 @@
 
 \input{tmp/psalmi}
 
-{\formatTextNoteSection\centering
+\vfill
 
-  \vfill
+{\formatTextNoteSection\centering
 
   EXPLICIT
 
+  \skipI
+
   LIBER PSALMORUM
 
-  \vfill
 }
+
+\vfill
 
 %\newpage
 

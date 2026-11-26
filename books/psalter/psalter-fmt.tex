@@ -34,6 +34,12 @@
 
 \newcommand{\psalmSkip}[1]{\vspace*{#1\baselineskip}}
 
+\newcommand{\psalmEnd}[1]{%
+  {\extraboldfont\small\phantom{..}\raisebox{0.20ex}{+}}
+
+  \vspace*{#1\baselineskip}
+}
+
 \newcommand{\psalmEndI}{%
   {\extraboldfont\small\phantom{..}\raisebox{0.20ex}{+}}
 
@@ -67,20 +73,39 @@
 }
 
 \newcommand{\raiseVal}{0.75ex}
-\newcommand{\hspaceVal}{2.0em}
+\newcommand{\hspaceVal}{3.0em}
+\newcommand{\hspaceEndVal}{2.0em}
 
-\newcommand{\psalmEndDecorate}[1]{%
+%\newcommand{\psalmEndDecorate}[1]{%
+
+  %\vspace*{#1\baselineskip}
+  %{\centering \raisebox{\raiseVal}{–} \hspace*{\hspaceVal} {\LARGE ✠} \hspace*{\hspaceVal} \raisebox{\raiseVal}{–} \par}
+  %\vspace*{#1\baselineskip}
+
+%}
+
+%\newcommand{\psalmEndDecorateNewPage}{%
+
+  %\vfill\vfill
+  %{\centering \raisebox{\raiseVal}{–} \hspace*{\hspaceEndVal} {\LARGE ✠} \hspace*{\hspaceEndVal} \raisebox{\raiseVal}{–} \par}
+  %\vfill
+  %\newpage
+
+%}
+
+
+\newcommand{\psalmEndDecorate}[1]{
 
   \vspace*{#1\baselineskip}
-  {\centering \raisebox{\raiseVal}{–} \hspace*{\hspaceVal} {\LARGE ✠} \hspace*{\hspaceVal} \raisebox{\raiseVal}{–} \par}
+  {\centering \phantom{..} {\Large ✠} \phantom{..} \par}
   \vspace*{#1\baselineskip}
 
 }
 
-\newcommand{\psalmEndDecorateNewPage}{%
+\newcommand{\psalmEndDecorateNewPage}{
 
   \vfill\vfill
-  {\centering \raisebox{\raiseVal}{–} \hspace*{\hspaceVal} {\LARGE ✠} \hspace*{\hspaceVal} \raisebox{\raiseVal}{–} \par}
+  {\centering \phantom{..} {\Large ✠} \phantom{..} \par}
   \vfill
   \newpage
 
