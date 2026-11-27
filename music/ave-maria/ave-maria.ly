@@ -4,7 +4,7 @@
 melody = \relative c' {
   \clef "blackmensural-c5"
   \melodyDefaults
-  %\tempo 4 = 80
+  %\tempo 4 = 70
   % 1
   f,4 c d 
   \shape #'((0 . 0)(0 . 1.5)(0 . 1.75)(0 . 0)) Slur
@@ -36,7 +36,7 @@ text = \lyricmode {
   % 1
   -- ve  Ma -- rí _ _ -- a
   % 2
-  grá -- zi -- a ple _ -- na
+  grá -- ti -- a ple _ -- na
   % 3
   Dò -- mi -- nus te -- cum;
   % 4
@@ -44,11 +44,11 @@ text = \lyricmode {
   % 5
   in __ _ mu -- li _ -- è -- ri _ -- bus,
   % 6
-  et be -- ne -- dìc -- tus frûc -- tus ven -- tris tu -- i, __ _ Įe _ -- sus __ _
+  et be -- ne -- dìc -- tus frûc -- tus ven -- tris tu -- i, __ _ Je _ -- sus __ _
   % 7
   Sânc -- ta Ma -- rí _ -- a, Ma -- ter De _ -- i,
   % 8
-  o -- ra pro no _ -- bīs pec -- ca _ -- tó _ -- ri -- bus
+  o -- ra pro no _ -- bis pec -- ca _ -- tó _ -- ri -- bus
   % 9
   nunc et in __ _ ho _ -- ra mor -- tis nos _ -- trae. __ _
   % 10
@@ -56,8 +56,8 @@ text = \lyricmode {
 }
 
 \header {
-  title = "AVE MARÍA"
-  opus = \markup { \sans \smallCaps "melódia oriģináli" }
+  title = \markup { \sans \bold "AVE MARIA" }
+  opus = \markup { \sans "Melodia Originali" }
   tagline = #f
 }
 

@@ -1,4 +1,4 @@
-#(ly:font-config-add-font "/home/anon/Git/llvp/books/common/fonts/KJV1611/KJV1611-Regular.otf")
+#(ly:font-config-add-font "/home/anon/Git/llvp/books/common/fonts/CormorantUpright2/CormorantUpright2-Regular.ttf")
 #(ly:font-config-add-font "/home/anon/Git/llvp/books/common/fonts/EBGaramond/static/EBGaramond-Regular.ttf")
 #(ly:font-config-add-font "/home/anon/Git/llvp/books/common/fonts/EBGaramond/static/EBGaramond-Italic.ttf")
 
@@ -6,7 +6,7 @@
 
 \paper {
   % New property assignment syntax for 2.24+
-  property-defaults.fonts.serif = "KJV1611"
+  property-defaults.fonts.serif = "CormorantUpright2"
   property-defaults.fonts.sans  = "EBGaramond"
   property-defaults.fonts.typewriter = "monospace"
 
@@ -32,7 +32,7 @@ melodyDefaults = {
   \override Staff.BarLine.thick-thickness = #6
   \override Stem.thickness = #1
   \override Lyrics.LyricSpace.minimum-distance = #3.0
-  \override NoteHead.style = #'petrucci
+  %\override NoteHead.style = #'petrucci
   \override Staff.Rest.style = #'neomensural
   %\override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/4)
 }
