@@ -4,10 +4,8 @@ import sys
 
 i = sys.argv[1]
 
-i = re.sub(r'ċ', 'c', i)
-i = re.sub(r'Ċ', 'C', i)
-i = re.sub(r'ġ', 'g', i)
-i = re.sub(r'Ġ', 'G', i)
+i = re.sub(r'ç', 'c', i)
+i = re.sub(r'Ç', 'C', i)
 
 i = re.sub(r'Á', 'A', i)
 i = re.sub(r'Ó', 'O', i)
@@ -53,13 +51,6 @@ i = re.sub(r'ŷ', 'y', i)
 
 i = re.sub(r'Ů', 'U', i)
 i = re.sub(r'ů', 'u', i)
-
-i = re.sub(r'W', 'U', i)
-i = re.sub(r'J', 'J', i)
-
-i = re.sub(r'w', 'u', i)
-i = re.sub(r'j', 'i', i)
-
-i = re.sub(r'~', '', i)
+i = re.sub(r'ũ', 'u', i)
 
 print(i)

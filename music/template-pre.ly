@@ -27,14 +27,14 @@ melodyDefaults = {
   %\dynamicUp
   \stemNeutral
   \omit Staff.TimeSignature
+  %\omit Stem
   \set melismaBusyProperties = #'()
   \override Staff.BarLine.hair-thickness = #3
   \override Staff.BarLine.thick-thickness = #6
   \override Stem.thickness = #1
-  \override Lyrics.LyricSpace.minimum-distance = #3.0
+  \override Lyrics.LyricSpace.minimum-distance = #2.0
   %\override NoteHead.style = #'petrucci
   \override Staff.Rest.style = #'neomensural
-  %\override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/4)
 }
 
 % Default to ##t across all scores

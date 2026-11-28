@@ -31,10 +31,8 @@ melody = \relative c' {
 }
 
 text = \lyricmode {
-  %\markup { \concat { \fontsize #4 "A" \tied-lyric #"" "-" } }
-  \markup { \concat { \fontsize #4 "A" } }
   % 1
-  -- ve  Ma -- rí _ _ -- a
+  A -- ve  Ma -- rí _ _ -- a
   % 2
   grá -- ti -- a ple _ -- na
   % 3
